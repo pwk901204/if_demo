@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>组件 - 公共页面</title>
+    <link rel="stylesheet" href="../js/plugins/flyui/css/flyui.css" />
+    <link rel="stylesheet" href="../css/common/base.css" />
+    <link rel="stylesheet" href="../css/common/site.css" />
+    <link rel="stylesheet" href="../css/common/common.css" />
+    <!-- <link rel="stylesheet" href="../css/frame/orange.css">   -->
+</head>
+<body>
+    <!--主容器-->
+    <div class="components-wrap">
+        <h2>组件  Components</h2>
+        <span class="components-node">
+            <div class="components-title">按钮  Button</div>
+            <div class="components-body">
+                <div class="components-btn">
+                    <button type="button" 
+                        class="btn btn-normal">查询</button>
+                    <button type="button" 
+                        class="btn btn-normal btn-normal-hover">查询</button>
+                </div>
+                <div class="components-btn">
+                    <button type="button" 
+                        class="btn btn-cancel">重置</button>
+                    <button type="button" 
+                        class="btn btn-cancel btn-cancel-hover">重置</button>
+                </div>
+                
+                <div class="components-btn">
+                    <button type="button" 
+                        class="btn btn-option option-add"><div class="option-icon "></div>新增</button>
+                    <button type="button" 
+                        class="btn btn-option option-add option-add-hover"><div class="option-icon "></div>新增</button>
+                </div>
+                
+            </div>
+        </span>
+
+        <span class="components-node">
+            <div class="components-title">单选按钮  Radio</div>
+            <div class="components-body">
+                <div class="radio-wrap">
+                    <span class="radio-default"><span class="icon-node"></span>未选中</span>
+                    <span class="radio-default radio-hover"><span class="icon-node"></span>Hover</span>
+                    <span class="radio-default radio-selected"><span class="icon-node"></span>已选中</span>
+                </div>
+                <div class="radio-wrap" data-name="sex">
+                    <span class="radio-default" data-value="1"><span class="icon-node"></span>男生</span>
+                    <span class="radio-default" data-value="2"><span class="icon-node"></span>女生</span>
+                    <span class="radio-default" data-value="3"><span class="icon-node"></span>未知</span>
+                </div>
+
+                <div class="radio-wrap" data-name="sex">
+                    <span class="radio-default" 
+                        data-value="1" 
+                        data-bind="enabled: enabledFlag"><span class="icon-node"></span>禁用/未选中</span>
+                    <span class="radio-default radio-selected" 
+                        data-value="2" 
+                        data-bind="enabled: enabledFlag"><span class="icon-node"></span>禁用/已选中</span>
+                </div>
+            </div>
+        </span>
+
+        <span class="components-node">
+            <div class="components-title">复选框  Checkbox</div>
+            <div class="components-body">
+                <div class="checkbox-wrap" data-name="爱好">
+                    <span class="select-default" data-value="1"><span class="icon-node"></span>打篮球</span>
+                    <span class="select-default" data-value="2"><span class="icon-node"></span>踢足球</span>
+                    <span class="select-default" data-value="3"><span class="icon-node"></span>写代码</span>
+                    <span class="select-default" data-value="4"><span class="icon-node"></span>睡大觉</span>
+                </div>
+
+                <div class="checkbox-wrap" data-name="爱好">
+                    <span class="select-default" 
+                        data-bind="enabled: enabledFlag" 
+                        data-value="1"><span class="icon-node"></span>禁用/未选中</span>
+                    <span class="select-default select-check" 
+                        data-bind="enabled: enabledFlag" 
+                        data-value="2"><span class="icon-node"></span>禁用/已选中</span>
+                </div>
+            </div>
+        </span>
+
+        <span class="components-node">
+            <div class="components-title">常用组件</div>
+            <div class="components-body">
+                <div class="components-btn">
+                    <button type="button" 
+                        data-bind="click: confirmClick" 
+                        class="btn btn-normal">确认</button>
+                    <button type="button" 
+                        data-bind="click: maskClick" 
+                        class="btn btn-cancel">遮罩</button>
+                </div>
+                <div class="components-btn">
+                    <button type="button" 
+                        data-bind="click: topTipShow" 
+                        class="btn btn-normal">提示</button>
+                    <button id="followTipShow" type="button" 
+                        data-bind="click: followTipShow" 
+                        class="btn btn-cancel">跟随</button>
+                </div>
+            </div>
+        </span>
+    </div>
+    <!--主容器-->
+    <script src="../js/plugins/require-2.1.11.js" data-main="../js/apps/pages/components.js"></script>
+</body>
+</html>

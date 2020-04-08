@@ -1,0 +1,131 @@
+.audio-wrapper {
+  background-color: #fcfcfc;
+  margin: 10px auto;
+  max-width: 670px;
+  height: 35px;
+  border: 1px solid #e0e0e0;
+}
+
+.audio-left {
+  display: inline-block;
+  vertical-align: top;
+  padding-top: 2px;
+  text-align: center;
+  width: 10%;
+  height: 100%;
+}
+
+.audio-left img {
+  width: 30px;
+  display: initial;   /* 解除与app的样式冲突 */
+  cursor: pointer;
+}
+
+.audio-right {
+  display: inline-block;
+  vertical-align: top;
+  margin:0 10px;
+  /* width: 60%; */
+  width: 50%;
+  height: 100%;
+}
+
+.progress-bar-bg {
+  margin-top: 15px;
+  /* margin-top: 25px; */
+  background-color: #d9d9d9;
+  position: relative;
+  height: 2px;
+  cursor: pointer;
+}
+
+.progress-bar {
+  background-color: #649fec;
+  width: 0;
+  height: 2px;
+}
+
+.progress-bar-bg span {
+  content: " ";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  background-color: #3e87e8;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -5px;
+  margin-left: -5px;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.audio-time {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 14px;
+  line-height: 35px
+}
+
+.audio-voice{
+  display: inline-block;
+  vertical-align: top;
+  margin:0 10px;
+  padding-top: 2px;
+}
+
+.audio-voice img{
+  width: 30px;
+  cursor: pointer;
+}
+
+.audio-voice-num{
+  display: inline-block;
+    vertical-align: top;
+    /* margin: 0px 2px; */
+    width: 18%;
+    height: 100%;
+    padding-right: 10px;
+    box-sizing: border-box;
+}
+.voice-bar-bg{
+  margin-top: 15px;
+    background-color: #d9d9d9;
+    position: relative;
+    height: 2px;
+    cursor: pointer;
+}
+.voice-dot{
+  content: " ";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    background-color: #3e87e8;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -5px;
+    margin-left: -5px;
+    cursor: pointer;
+    z-index: 100;
+}
+.voice-bar{
+  background-color: #649fec;
+  width: 0;
+  height: 2px;
+}
+
+
+.file-name{
+  height: 20px;
+  width: 100%;
+  max-width: 670px;
+  margin: 0 auto;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

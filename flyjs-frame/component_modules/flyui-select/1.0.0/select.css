@@ -1,0 +1,40 @@
+.list-container {
+    padding: 2px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    border-radius: 3px;
+}
+
+.list {
+    height: 100%;
+    font-size: 14px;
+}
+
+.list-optionlabel,
+.list .item {
+    padding: 1px 5px 1px 5px;
+    border-radius: 3px;
+    line-height: 1.8em;
+    min-height: 1.8em;
+    cursor: default;
+}
+
+.list-optionlabel.state-hover,
+.list-optionlabel.state-focused,
+.list-optionlabel.state-selected,
+.list .state-hover,
+.list .state-focused,
+.list .state-selected {
+    padding: 0 4px;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.list-filter {
+    position: relative;
+}
+
+.dropdownlist .input,
+.combobox .input {
+    margin-right: 29px;
+}

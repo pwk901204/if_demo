@@ -1,0 +1,38 @@
+{
+  "list": [
+    {
+      "name": "xxmh",
+      "parentId": 0,
+      "id": 1,
+      "meta": {
+        "title": "信息门户"
+      },
+      "path": "/xxmh",
+      "actions": [
+        {
+          "action": "",
+          "describe": "",
+          "code": ""
+        }
+      ]
+    },
+    {
+      "name": "yls",
+      "parentId": 0,
+      "id": 2,
+      "meta": {
+        "title": "阅览室"
+      },
+      "path": "/yls",
+      "actions": [
+        {
+          "action": "",
+          "describe": "",
+          "code": ""
+        }
+      ]
+    }
+  ],
+  "flag": true,
+  "msg": "SUCCESS"
+}

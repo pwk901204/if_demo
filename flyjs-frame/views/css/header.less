@@ -1,0 +1,59 @@
+.header {
+    z-index: 99;
+    .system {
+        .user-info {
+            cursor: default;
+        }
+        .system-config {
+            &.active {
+                background-color: #f3f3f3;
+            }
+            position: relative;
+            .topbar-config-pop {
+                background: #fff;
+                position: absolute;
+                top: 70px;
+                margin-top: -1px;
+                left: 0;
+                width: 100%;
+                i {
+                    display: block;
+                    position: absolute;
+                    top: -11px;
+                    left: 50%;
+                    margin-left: -6px;
+                    width: 0;
+                    height: 0;
+                    border-left: 6px solid #f3f3f3;
+                    border-right: 6px solid #f3f3f3;
+                    border-bottom: 12px solid #fff;
+                }
+                a {
+                    display: block;
+                    line-height: 41px;
+                    font-size: 12px;
+                    text-align: center;
+                    &,
+                    &:focus,
+                    &:visited {
+                        color: #333;
+                    }
+                    &:hover,
+                    &.active {
+                        background-color: #34c1e4;
+                        color: #fff;
+                    }
+                }
+                i + a {
+                    border: 1px solid #e1e3e8;
+                    border-bottom: none;
+                    border-radius: 5px 5px 0 0;
+                }
+                a + a {
+                    border: 1px solid #e1e3e8;
+                    border-radius:  0 0 5px 5px;
+                }
+            }
+        }
+    }
+}

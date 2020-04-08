@@ -1,0 +1,160 @@
+.grid {
+    background-color: #fff;
+    border: 1px solid rgb(230, 230, 230);
+}
+.grid-header {
+    zoom: 1;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+}
+.grid-footer {
+    zoom: 1;
+    border-top-style: solid;
+    border-top-width: 1px;
+}
+.grid-header-freeze,
+.grid-content-freeze {
+    float: left;
+    width: 100px;
+}
+.grid-header-freeze,
+.grid-header-wrap,
+.grid-content-freeze,
+.grid-content-wrap {
+    position: relative;
+    /* width: 100%; */
+    overflow: hidden;
+
+}
+.grid-content-freeze,
+.grid-header-freeze {
+    border-style: solid;
+    border-width: 0 1px 0 0;
+    zoom: 1;
+}
+.grid table {
+    width: 100%;
+    table-layout: fixed;
+    margin: 0;
+    max-width: none;
+    border-collapse: collapse;
+    border-spacing: 0;
+    empty-cells: show;
+    border-width: 0;
+    outline: 0;
+
+    *width: auto;
+    *border-collapse: collapse;
+}
+.grid tr td,
+.grid-header,
+.grid-footer,
+.grid-header-freeze,
+.grid-header-wrap,
+.grid-header th,
+.grid-content-freeze {
+    border-color: #e6e6e6;
+}
+.grid td input,
+.grid th input {
+    vertical-align: middle;
+}
+
+.grid-header table {
+    margin-bottom: -1px;
+    /* 作用不明，去掉 */
+    /* border-left: 2px solid #fafafa; */
+}
+.grid-header th {
+    overflow: hidden;
+    border-style: solid;
+    border-width: 0 0 1px 1px;
+    padding: .8em;
+    background-color: #fafafa;
+    color: #666;
+    font-weight: 400;
+    line-height: 1.8em;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.grid-header th:first-child {
+    border-left: none;
+}
+.grid-header th .icon {
+    color: #333;
+}
+.grid-header .grid-filter {
+    float: right;
+    margin: -0.8em;
+    padding: 0.8em;
+    font-size: 1.2em;
+}
+.grid-content {
+    position: relative;
+    width: 100%;
+    overflow: auto;
+    zoom: 1;
+    min-height: 0;
+}
+
+.grid-content tr td {
+    border-left-width: 0;
+}
+.grid-content tr td {
+    border-style: solid;
+    border-width: 1px 0 0;
+    /* border-left-color: transparent; */
+    padding: .8em;
+    overflow: hidden;
+    line-height: 1.6em;
+    vertical-align: middle;
+    text-overflow: ellipsis;
+}
+.grid-content tr td .widget {
+    display: block;
+    width: auto;
+}
+.grid-content tr:first-child td {
+    border-top: 0;
+}
+.grid-content td:first-child {
+    border-left-width: 0;
+}
+.grid tbody tr:nth-child(odd) td,
+.grid tbody tr.odd td {
+    background-color: #fff;
+}
+.grid tbody tr:nth-child(even) td,
+.grid tbody tr.even td {
+    background-color: #fcfcfc;
+}
+.grid tbody tr:hover td,
+.grid tbody tr.hover td {
+    background-color: #fffcee;
+}
+
+
+.grid-scroll-x .grid-content-freeze {
+    overflow-x: scroll;
+}
+.grid-scroll-x .grid-content-wrap {
+    overflow-x: scroll;
+}
+.grid-scroll-y .grid-header {
+    padding-right: 17px;
+}
+.grid-scroll-y .grid-header-wrap {
+    border-style: solid;
+    border-width: 0 1px 0 0;
+    zoom: 1;
+}
+.grid-scroll-y .grid-content {
+    overflow: hidden;
+}
+.grid-scroll-y .grid-content-wrap {
+    height: 100%;
+    overflow-y: scroll;
+}
+.grid-scroll-y .grid-content-freeze {
+    height: 100%;
+}

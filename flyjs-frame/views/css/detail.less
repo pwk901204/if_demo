@@ -1,0 +1,36 @@
+.page-view-detail {
+    .info-list {
+        word-break: break-all;
+        table-layout: fixed;
+        width: 100%;
+        color: #333;
+        th {
+            height: 35px;
+            width: 80px;
+            text-align: right;
+            font-weight: normal;
+        }
+        td {
+            padding-left: 20px;
+        }
+    }
+    .info-list-tag {
+        position: relative;
+        .info-tag-content {
+            line-height: 40px;
+            background-color: #f8f8f8;
+            padding-left: 23px;
+            font-size: 14px;
+            &:before {
+                display: block;
+                position: absolute;
+                left: 10px;
+                top: 13px;
+                content: ' ';
+                width: 3px;
+                height: 14px;
+                background-color: #666;
+            }
+        }
+    }
+}

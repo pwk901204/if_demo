@@ -1,0 +1,15 @@
+ {
+   "name": "dropdown",
+   "version": "1.0.0",
+   "description": "flyui dropdown",
+   "main": "dropdown.js",
+   "files": [
+     "dropdown.tpl",
+     "dropdown.js"
+   ],
+   "dependencies": {
+     "flyui/select": "1.0.0",
+     "lib/fly": "1.2.6",
+     "lib/jquery": "1.8.2"
+   }
+ }

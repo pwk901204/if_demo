@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>标准化页面框架</title>
+    <link rel="stylesheet" href="../js/plugins/flyui/css/flyui.css">
+    <link rel="stylesheet" type="text/css" href="css/common/common.css">
+    <link rel="stylesheet" type="text/css" href="css/common/base.css">
+    <link rel="stylesheet" type="text/css" href="css/common/site.css">
+    <link rel="stylesheet" type="text/css" href="css/frame/default.css">
+    <link rel="stylesheet" type="text/css" href="css/frame/green.css">
+</head>
+<body>
+    <div class = "container">
+        <div class = "container-header">
+            <div class = "logo">
+                <span class="logo-name">
+                    <span class="logo-text">实习管理系统</span>
+                </span>
+            </div>
+
+            <!--头部导航 方案1/2-->
+            <div class = "nav nav-scheme" id ="navId"></div>
+    
+            <!--登录用户 方案1/2-->
+            <div class="header-login">
+                <div class="user-wrap">
+                    <img src="img/common/student.png" alt="FANG" width="40px" height="40px"><span class="welcome-text"><em>FANG</em>，欢迎您！</span><span class="user-exit" data-bind="click: userExit">退出登录</span>
+                </div>
+            </div>
+        </div>
+        <div class = "container-bottom">
+            <!--左侧菜单-->
+            <div class = "menu-left-content" data-bind="css: {closenav-true: menuOpenCloseFlag}">
+                <!-- 展开收起事件 -->
+                <div class="menu-top menu-open" 
+                    data-bind="click: menuOpenCloseClick, css: {menu-close: menuOpenCloseFlag}"></div>
+                <div class = "menu-left-content-fristInfo1 nav-scheme">
+                    <div class="first-navwrap" 
+                        data-bind="source: navListSource" 
+                        data-template="navListTemp" ></div>
+                </div>
+            </div>
+            <!--iframe-->
+            <div class = "container-content">
+                <iframe id="pageFrame" 
+				name="pageFrame" 
+				src="" 
+				frameborder="0" 
+				scrolling="auto" 
+				width="100%" 
+				height="100%"
+				style="display: block;"></iframe>
+            </div>
+
+            <div class="system-footer">版权所有 @ 科大讯飞股份有限公司</div>
+            <div style = "clear:both"></div>
+        </div>
+    </div>
+</body>
+
+<!--头部导航菜单-->
+<script type="text/html" id="navListTemp">
+    {{each $data as item i}}
+    <div class="first-navnode" 
+        data-bind="click: firstNavClick, css: {first-selected: isSelect}" 
+        title="{{item.navName}}">
+        <div class="icon-div"><img class="default-hide" src="{{item.selectIcon}}" alt=""><img class="default-show" src="{{item.icon}}"></div>
+        <div class="first-text ell">{{item.navName}}</div>
+        <div class="child-navwrap {{if item.item.length == 0}}hide{{/if}}" 
+            data-bind="source: item, css: {click-hide: clickHideFlag}" 
+            data-template="childTemp"></div>
+    </div>
+    {{/each}}
+</script>
+
+<!--方案1/2左侧菜单-->
+<script type="text/html" id="childTemp">
+    {{each $data as second i}}
+    <div class="second-body" data-bind="css: {second-selected: isSelect}">
+        <div class="second-navnode" 
+            data-bind="click: secondNavClick">
+            <div class="second-icon"><img src="{{second.icon}}"></div>
+            <div class="second-text ell" 
+                title="{{second.name}}">{{second.name}}</div>
+            <div class="second-arrow"></div>
+        </div>
+        <div class="third-body" 
+            data-bind="source: item" 
+            data-template="thirdTemp"></div>
+    </div>
+    
+    {{/each}}
+</script>
+
+<script id="thirdTemp" type="text/html">
+    {{each $data as third i}}
+        <div class="third-list ell" 
+            data-bind="click: thirdNavClick, css: {third-listed: isSelect}" 
+            title="{{third.name}}">{{third.name}}</div>
+    {{/each}}
+</script>
+
+
+<script src="js/plugins/require-2.1.11.js" data-main="js/apps/pages/index.js"></script>
+</html>
+
+
+
+
+
+

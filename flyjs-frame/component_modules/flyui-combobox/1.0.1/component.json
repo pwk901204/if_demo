@@ -1,0 +1,15 @@
+ {
+   "name": "combobox",
+   "version": "1.0.1",
+   "description": "flyui combobox",
+   "main": "combobox.js",
+   "files": [
+     "combobox.tpl",
+     "combobox.js"
+   ],
+   "dependencies": {
+     "flyui/select": "1.0.0",
+     "lib/fly": "1.2.6",
+     "lib/jquery": "1.8.2"
+   }
+ }

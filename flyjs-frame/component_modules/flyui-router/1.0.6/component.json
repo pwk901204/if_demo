@@ -1,0 +1,9 @@
+{
+  "name": "router",
+  "version": "1.0.6",
+  "description": "flyui的路由",
+  "main": "router.js",
+  "dependencies": {
+    "lib/fly": "1.2.6"
+  }
+}

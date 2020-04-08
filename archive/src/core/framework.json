@@ -1,0 +1,34 @@
+{
+  "data": {
+    "jk-xxmh": {
+      "name": "经开-信息门户",
+      "code": "jk-xxmh",
+      "routers": [
+        {
+          "path": "/index",
+          "name": "index",
+          "component": "packages/jk-xxmh/pages/xxmh",
+          "meta": {
+            "title": "首页"
+          }
+        }
+      ]
+    },
+    "jk-yls": {
+      "name": "经开-电子阅览室",
+      "code": "jk-yls",
+      "routers": [
+        {
+          "path": "/index",
+          "name": "index",
+          "component": "packages/jk-yls/pages/index",
+          "meta": {
+            "title": "首页"
+          }
+        }
+      ]
+    }
+  },
+  "flag": true,
+  "msg": "SUCCESS"
+}

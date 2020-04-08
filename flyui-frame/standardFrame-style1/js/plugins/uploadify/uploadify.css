@@ -1,0 +1,60 @@
+/*
+Uploadify
+Copyright (c) 2012 Reactive Apps, Ronnie Garcia
+Released under the MIT License <http://www.opensource.org/licenses/mit-license.php> 
+*/
+
+.uploadify {
+	position: relative;
+	/* margin-bottom: 1em; */
+	/* margin:5px; */
+}
+.uploadify-button {
+	color: #FFF;
+	text-align: center;
+	width: 100%;
+	/* margin-top: -32px; */
+}
+.uploadify-button.disabled {
+	background-color: #D0D0D0;
+	color: #808080;
+}
+.uploadify-queue {
+	/* margin-bottom: 1em; */
+}
+.uploadify-queue-item {
+	margin-top: 5px;
+	/* max-width: 350px; */
+	padding: 5px 5px;
+}
+.uploadify-queue-item .info{
+	cursor:pointer;
+}
+.uploadify-error {
+	/* background-color: #FDE5DD !important; */
+}
+.uploadify-queue-item .cancel a {
+	/* background: url('uploadify-cancel.png') 0 0 no-repeat; */
+	float: right;
+	height:	16px;
+	width: 30px;
+	color:#ff0000;
+	font-size:12px;
+	line-height:16px;
+	text-decoration: underline;
+}
+.uploadify-queue-item.completed {
+	background-color: #E5E5E5;
+}
+.uploadify-progress {
+	display:none;
+	background-color: #E5E5E5;
+	margin-top: 10px;
+	margin-right:35px;
+	/* width: 100%; */
+}
+.uploadify-progress-bar {
+	background-color: #0099FF;
+	height: 3px;
+	width: 1px;
+}

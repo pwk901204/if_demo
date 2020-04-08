@@ -1,0 +1,71 @@
+.pagination {
+    margin: 10px 0;
+    font-size: 12px;
+
+    .number {
+        float: right;
+        /* 这个样式意义不明，由于会撑出横向滚动条，暂时去掉 */
+        margin: 0 -3px;
+        height: 30px;
+        overflow: hidden;
+        a, span {
+            margin: 0 3px;
+            min-width: 1em;
+            text-align: center;
+        }
+        a.ellipsis,
+        span.ellipsis {
+            display: inline-block;
+            overflow: hidden;
+            margin-top: 7px;
+            margin-bottom: 7px;
+            height: 16px;
+        }
+        .current {
+            cursor: default;
+        }
+        .current.prev,
+        .current.next {
+            color: #999;
+            border-color: #ccc;
+            background: #fff;
+        }
+        .btn {
+            vertical-align: top;
+        }
+    }
+
+    .info,
+    .switch {
+        float: left;
+        height: 30px;
+        line-height: 30px;
+        margin-left: 20px;
+    }
+    .switch {
+        span.switch-info{
+            display: inline-block;
+            vertical-align: top;
+        }
+        .dropdownlist{
+            display: inline-block;
+            width: 70px;
+            margin: 0 10px;
+        }
+    }
+
+    .simple {
+        .btn {
+            padding: 5px 0;
+        }
+        .btn.active, 
+        .btn:active {
+            box-shadow: none;
+            -webkit-box-shadow: none;
+        }
+        .split-line {
+            margin: 0;
+        }
+    }
+}
+

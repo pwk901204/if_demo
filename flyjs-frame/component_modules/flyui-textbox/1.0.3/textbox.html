@@ -1,0 +1,14 @@
+<div class="widget textbox">
+  <span class="widget-wrap">
+    <span class="input">
+    {{if required}}
+    	<input name="{{name}}" required="required" type="text" />
+    {{else}}
+    	<input name="{{name}}" type="text" />
+    {{/if}}
+    </span>
+    {{if suffix}}
+    <span unselectable="on" class="select suffix" data-bind="click: onsuffix">{{#suffix}}</span>
+    {{/if}}
+  </span>
+</div>

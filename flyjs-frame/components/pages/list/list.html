@@ -1,0 +1,51 @@
+<div id="list" class="page-view-wrap">
+    <div class="page-view-breadcrumb">当前位置：首页 > 列表</div>
+    <div id="formWrap" class="page-view-header">
+        <div class="col-sm-3">
+            <fly:formcontrol data-title="部门负责人">
+                <fly:textbox data-bind="value: formObj.mc"></fly:textbox>
+            </fly:formcontrol>
+        </div>
+        <div class="col-sm-3">
+            <fly:formcontrol data-title="所属部门">
+                <fly:dropdown data-bind="source: departmentSource, value: formObj.bm" data-text-field="mc" data-value-field="id"></fly:dropdown>
+            </fly:formcontrol>
+        </div>
+        <div class="col-sm-2">
+            <button data-bind="events: {click: methods.searchHandle}" class="extend-btn btn-search"> <i></i> 搜索
+            </button>
+        </div>
+    </div>
+    <div class="page-view-grid">
+        <div class="grid-extend-title">
+            <div class="grid-extend-describe"> <i></i> 列表
+            </div>
+            <div class="grid-extend-btn">
+                <span data-bind="events: {click: methods.getAjaxData}" class="extend-btn">获取数据</span>
+            </div>
+            <div class="grid-extend-btn">
+                <span data-bind="events: {click: methods.addDepartment}" class="extend-btn">新增部门</span>
+            </div>
+        </div>
+        <div class="common-grid">
+            <fly:grid data-bind="source: gridDs">
+                <fly:column data-title="部门负责人">
+                    <span data-bind="text: creator, attr:{title: creator}"></span>
+                </fly:column>
+                <fly:column data-title="所属部门">
+                    <span data-bind="text: departmentName, attr:{title: departmentName}"></span>
+                </fly:column>
+                <fly:column data-title="描述">
+                    <span data-bind="text: description, attr:{title: description}"></span>
+                </fly:column>
+                <fly:column data-title="创建时间">
+                    <span data-bind="text: createTime, attr:{title: createTime}"></span>
+                </fly:column>
+                <fly:column data-title="操作">
+                    <button data-bind="events: {click: methods.viewHandle}" class="grid-btn">查看</button>
+                </fly:column>
+            </fly:grid>
+            <fly:pager data-bind="source: gridDs" data-auto-bind="false"></fly:pager>
+        </div>
+    </div>
+</div>

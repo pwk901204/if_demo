@@ -1,0 +1,49 @@
+.menu-wrapper {
+    .menu-item {
+        .menu-item-icon {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            vertical-align: middle;
+            background: url(../img/icon-menu-item.png) no-repeat;
+            &.menu-icon-home {
+                background-position: 0 0;
+            }
+            &.menu-icon-host {
+                background-position: 0 -44px;
+            }
+            &.menu-icon-colony {
+                background-position: 0 -88px;
+            }
+            &.menu-icon-strategy {
+                background-position: 0 -132px;
+            }
+            &.menu-icon-task {
+                background-position: 0 -177px;
+            }
+        }
+        &:hover,
+        &.active {
+            .menu-item-icon {
+                &.menu-icon-home {
+                    background-position: 0 -22px;
+                }
+                &.menu-icon-host {
+                    background-position: 0 -66px;
+                }
+                &.menu-icon-colony {
+                    background-position: 0 -110px;
+                }
+                &.menu-icon-strategy {
+                    background-position: 0 -155px;
+                }
+                &.menu-icon-task {
+                    background-position: 0 -199px;
+                }
+            }
+        }
+        .menu-item-text {
+            vertical-align: middle;
+        }
+    }
+}

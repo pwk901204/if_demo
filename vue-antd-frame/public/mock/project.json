@@ -1,0 +1,209 @@
+{
+  "flag": true,
+  "desc": "SUCCESS",
+  "list": [
+    {
+      "id": 1,
+      "pname": "阜阳档案系统阜阳档案系统阜阳档案系统阜阳档案系统阜阳档案系统",
+      "customer": "讯飞智元信息讯飞智元信息讯飞智元信息讯飞智元信息讯飞智元信息讯飞智元信息",
+      "pdepartment": "交付二部交付二部交付二部交付二部交付二部交付二部交付二部交付二部",
+      "rstatus": "70%",
+      "pstatus": "3",
+      "pstatusName": "进行中",
+      "pstatusName1": "进行中",
+      "pstatusName2": "进行中",
+      "SF": 0
+    },
+    {
+      "id": 2,
+      "pname": "阜阳档案系统阜阳档案系统阜阳档案系统阜阳档案系统阜阳档案系统",
+      "customer": "讯飞智元信息讯飞智元信息讯飞智元信息讯飞智元信息讯飞智元信息讯飞智元信息",
+      "pdepartment": "交付二部交付二部交付二部交付二部交付二部交付二部交付二部交付二部",
+      "rstatus": "80%",
+      "pstatus": "3",
+      "pstatusName": "进行中",
+      "pstatusName1": "进行中",
+      "pstatusName2": "进行中",
+      "SF": 1
+    },
+    {
+      "id": 3,
+      "pname": "阜阳档案系统",
+      "customer": "讯飞智元信息",
+      "pdepartment": "交付二部",
+      "rstatus": "张斌",
+      "pstatus": "5",
+      "pstatusName": "已完成",
+      "SF": 0
+    },
+    {
+      "id": 4,
+      "pname": "阜阳档案系统",
+      "customer": "讯飞智元信息",
+      "pdepartment": "交付二部",
+      "rstatus": "张斌",
+      "pstatus": "9",
+      "pstatusName": "已驳回",
+      "SF": 0
+    },
+    {
+      "id": 5,
+      "pname": "阜阳档案系统",
+      "customer": "讯飞智元信息",
+      "pdepartment": "交付二部",
+      "rstatus": "张斌",
+      "pstatus": "9",
+      "pstatusName": "已驳回",
+      "SF": 0
+    },
+    {
+      "id": 6,
+      "pname": "阜阳档案系统",
+      "customer": "讯飞智元信息",
+      "pdepartment": "交付二部",
+      "rstatus": "张斌",
+      "pstatus": "9",
+      "pstatusName": "已驳回",
+      "SF": 0
+    },
+    {
+      "id": 7,
+      "pname": "阜阳档案系统",
+      "customer": "讯飞智元信息",
+      "pdepartment": "交付二部",
+      "rstatus": "张斌",
+      "pstatus": "9",
+      "pstatusName": "已驳回",
+      "SF": 0
+    },
+    {
+      "id": 8,
+      "pname": "阜阳档案系统",
+      "customer": "讯飞智元信息",
+      "pdepartment": "交付二部",
+      "rstatus": "张斌",
+      "pstatus": "9",
+      "pstatusName": "已驳回",
+      "SF": 0
+    },
+    {
+      "id": 9,
+      "pname": "阜阳档案系统",
+      "customer": "讯飞智元信息",
+      "pdepartment": "交付二部",
+      "rstatus": "张斌",
+      "pstatus": "9",
+      "pstatusName": "已驳回",
+      "SF": 0
+    },
+    {
+      "id": 10,
+      "pname": "阜阳档案系统",
+      "customer": "讯飞智元信息",
+      "pdepartment": "交付二部",
+      "rstatus": "张斌",
+      "pstatus": "9",
+      "pstatusName": "已驳回"
+    },
+    {
+      "id": 11,
+      "pname": "阜阳档案系统",
+      "customer": "讯飞智元信息",
+      "pdepartment": "交付二部",
+      "rstatus": "张斌",
+      "pstatus": "9",
+      "pstatusName": "已驳回"
+    },
+    {
+      "id": 12,
+      "pname": "阜阳档案系统",
+      "customer": "讯飞智元信息",
+      "pdepartment": "交付二部",
+      "rstatus": "张斌",
+      "pstatus": "9",
+      "pstatusName": "已驳回"
+    },
+    {
+      "id": 13,
+      "pname": "阜阳档案系统",
+      "customer": "讯飞智元信息",
+      "pdepartment": "交付二部",
+      "rstatus": "张斌",
+      "pstatus": "9",
+      "pstatusName": "已驳回"
+    },
+    {
+      "id": 14,
+      "pname": "阜阳档案系统",
+      "customer": "讯飞智元信息",
+      "pdepartment": "交付二部",
+      "rstatus": "张斌",
+      "pstatus": "9",
+      "pstatusName": "已驳回"
+    },
+    {
+      "id": 15,
+      "pname": "阜阳档案系统",
+      "customer": "讯飞智元信息",
+      "pdepartment": "交付二部",
+      "rstatus": "张斌",
+      "pstatus": "9",
+      "pstatusName": "已驳回"
+    },
+    {
+      "id": 16,
+      "pname": "阜阳档案系统",
+      "customer": "讯飞智元信息",
+      "pdepartment": "交付二部",
+      "rstatus": "张斌",
+      "pstatus": "9",
+      "pstatusName": "已驳回"
+    },
+    {
+      "id": 17,
+      "pname": "阜阳档案系统",
+      "customer": "讯飞智元信息",
+      "pdepartment": "交付二部",
+      "rstatus": "张斌",
+      "pstatus": "9",
+      "pstatusName": "已驳回"
+    },
+    {
+      "id": 18,
+      "pname": "阜阳档案系统",
+      "customer": "讯飞智元信息",
+      "pdepartment": "交付二部",
+      "rstatus": "张斌",
+      "pstatus": "9",
+      "pstatusName": "已驳回"
+    },
+    {
+      "id": 19,
+      "pname": "阜阳档案系统",
+      "customer": "讯飞智元信息",
+      "pdepartment": "交付二部",
+      "rstatus": "张斌",
+      "pstatus": "9",
+      "pstatusName": "已驳回"
+    },
+    {
+      "id": 20,
+      "pname": "阜阳档案系统",
+      "customer": "讯飞智元信息",
+      "pdepartment": "交付二部",
+      "rstatus": "张斌",
+      "pstatus": "9",
+      "pstatusName": "已驳回"
+    },
+    {
+      "id": 21,
+      "pname": "阜阳档案系统",
+      "customer": "讯飞智元信息",
+      "pdepartment": "交付二部",
+      "rstatus": "张斌",
+      "pstatus": "9",
+      "pstatusName": "已驳回"
+    }
+  ],
+  "total": 21
+}

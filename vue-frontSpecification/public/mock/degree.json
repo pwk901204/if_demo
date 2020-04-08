@@ -1,0 +1,22 @@
+{
+  "flag": true,
+  "desc": "SUCCESS",
+  "data": [
+    {
+      "label": "小学",
+      "value": "1"
+    },
+    {
+      "label": "初中",
+      "value": "2"
+    },
+    {
+      "label": "高中",
+      "value": "3"
+    },
+    {
+      "label": "大学",
+      "value": "4"
+    }
+  ]
+}

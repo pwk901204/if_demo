@@ -1,0 +1,54 @@
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+/**
+ * 错误页面展示 
+ * 绿色版本 
+ */
+body.body-404 {
+    background: url(../../img/frame/green/404.png) no-repeat center center;
+}
+
+body.body-403 {
+    background: url(../../img/frame/green/403.png) no-repeat center center;
+}
+
+body.body-500 {
+    background: url(../../img/frame/green/500.png) no-repeat center center;
+}
+
+
+/**
+ * 错误页面展示 
+ * 橙色版本 
+ */
+body.body-404 {
+    background: url(../../img/frame/orange/404.png) no-repeat center center;
+}
+
+body.body-403 {
+    background: url(../../img/frame/orange/403.png) no-repeat center center;
+}
+
+body.body-500 {
+    background: url(../../img/frame/orange/500.png) no-repeat center center;
+}
+
+/**
+ * 默认蓝色版本 
+ */
+ body.body-404 {
+    background: url(../../img/common/404.png) no-repeat center center;
+}
+
+body.body-403 {
+    background: url(../../img/common/403.png) no-repeat center center;
+}
+
+body.body-500 {
+    background: url(../../img/common/500.png) no-repeat center center;
+}

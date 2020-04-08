@@ -1,0 +1,201 @@
+
+/** 头部渐变背景 */
+.container-header {
+	background: #ff8432 url(../../img/frame/orange/head.png) no-repeat left center;
+}
+
+/** logo文本颜色 */
+.logo-text {
+	color: #ff7760;
+}
+
+/** 左侧导航选中样式 */
+.menu-left-info .menu-selected, 
+.menu-left-info .menu-selected:hover, 
+.subItem-num {
+	    background: #f5f5f5 url(../../img/frame/orange/left-selected.png) no-repeat left center;
+}
+
+/*输入框 样式定义*/
+.textbox .input:hover,
+.textbox .input:focus {
+    border: 1px solid #ff9959;
+}
+
+.state-hover, .state-hover:hover {
+    border-color: #ff9959;
+}
+
+div.state-selected:hover, 
+li.state-selected:hover {
+    background-color: #ff9959;
+    border-color: #ff9959;
+}
+
+/** 日期选中样式 */
+.calender td.active,
+.calender td.active:hover,
+.calender td.active:active {
+    background-color: #ff9959;
+}
+
+/*列表分页 按钮*/
+.btn-primary:active:hover,
+.btn-primary.active:hover,
+.open > .dropdown-toggle.btn-primary:hover,
+.btn-primary:active:focus,
+.btn-primary.active:focus,
+.open > .dropdown-toggle.btn-primary:focus,
+.btn-primary:active.focus,
+.btn-primary.active.focus,
+.open > .dropdown-toggle.btn-primary.focus,
+.btn-primary:focus,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:link,
+.btn-primary {
+  background-color: #ff9959;
+  border-color: #ff9959;
+}
+
+/* 下拉框 配色 */
+.state-selected, .state-selected:link, 
+.state-selected:visited {
+    background-color: #ff9959;
+    border-color: #ff9959;
+}
+
+/**
+ * 按钮模块 
+ */
+.btn-normal {
+	background-color: #ff9959;
+}
+
+.btn-normal:hover,
+.btn-normal:focus,
+.btn-normal:active,
+.btn-normal-hover {
+    background-color: #ff7837;
+}
+
+.btn-option {
+	border: 1px solid #ff9959;
+    color: #ff9959;
+}
+
+.btn-option:hover,
+.btn-option:focus,
+.btn-option:active,
+.option-add-hover {
+    background-color: #fff4ed;
+    color: #ff9959;
+}
+
+.btn-lg:after, 
+.opt-name:after,
+.btn:after,
+.checkbox-wrap .select-default .icon-node:after,
+.radio-wrap .radio-default .icon-node:after {
+    background-color: #ff9959;
+}
+
+.btn-cancel:after {
+    background-color: #cdcdcd;
+}
+
+/** 新增按钮 */
+.option-add .option-icon {
+    background: url(../../img/frame/orange/option-add.png) no-repeat center center;
+}
+
+/** 编辑按钮 */
+.option-edit .option-icon {
+    background: url(../../img/frame/orange/option-edit.png) no-repeat center center;
+}
+
+
+/** 导出按钮 */
+.option-export .option-icon {
+    background: url(../../img/frame/orange/option-export.png) no-repeat center center;
+}
+
+/** tab选中状态 */
+.list-tab .tab-spaned {
+	border-bottom: 2px solid #ff9959;
+}
+
+/** 列表中的操作按钮 */
+.btn-default:hover, 
+.btn-default:focus, 
+.btn-default.focus, 
+.btn-default:active,
+.btn-default.active,
+.opt-name:hover,
+.opt-name:focus, 
+.opt-name.focus, 
+.opt-name:active,
+.opt-name.active,
+.opt-name.active:hover {
+	border: 1px solid #ff9959;
+	background-color: #ff9959;
+}
+
+.btn-default:active:hover,
+.btn-default.active:hover,
+.open > .dropdown-toggle.btn-default:hover,
+.btn-default:active:focus,
+.btn-default.active:focus,
+.open > .dropdown-toggle.btn-default:focus,
+.btn-default:active.focus,
+.btn-default.active.focus,
+.open > .dropdown-toggle.btn-default.focus {
+    color: #fff;
+    border: 1px solid #ff9959;
+    background-color: #ff9959;
+}
+
+.more-opt:hover {
+	border: none;
+    background: url(../../img/frame/orange/more-icon-hover.png) no-repeat center center;
+}
+
+.list-table tbody tr td:hover,
+.list-table tbody tr:hover td,
+.list-table tbody tr.hover td {
+    background-color: #fff4ed;
+}
+
+.select-check {
+	background: url(../../img/frame/orange/checkbox-selected.png) no-repeat left center;
+}
+
+.radio-wrap .radio-selected,
+.radio-wrap .radio-selected:hover {
+    background: url(../../img/frame/orange/radio-selected.png) no-repeat left center;
+}
+
+/**
+ * 弹框样式 
+ */
+.dialog .dialog-header {
+	background-color: #ff9959;
+}
+
+.dialog-footer button.dialog-autofocus:focus, 
+.dialog-footer button.dialog-autofocus:active, 
+.dialog-footer button.dialog-autofocus {
+	outline: none;
+    background-color: #ff9959;
+    border-color: #ff9959;
+}
+
+.dialog-footer button.dialog-autofocus:hover {
+	background-color: #ff7837;
+    border-color: #ff7837;
+}
+
+.fly-mask-content>div>span {
+	background: url(../../img/frame/orange/loading.gif) no-repeat left center;
+	padding-left: 33px;
+}

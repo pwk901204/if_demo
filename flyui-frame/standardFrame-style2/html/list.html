@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../js/plugins/flyui/css/flyui.css" />
+    <link rel="stylesheet" href="../css/common/base.css" />
+    <link rel="stylesheet" href="../css/common/site.css" />
+    <link rel="stylesheet" href="../css/common/common.css" />  
+    <link rel="stylesheet" href="../css/frame/green.css">
+</head>
+<body>
+    <!--主容器-->
+    <div class="main-box">
+        <!--当前位置-->
+        <div class="current-location">
+            <span class="color-666">当前位置：计划与任务</span>
+            <span class="color-333"> > 开票查询</span>
+        </div>
+        <!--查询区域-->
+        <div class="query-bg">
+            <div class="query-box">
+                <!--表单-->
+                <div class="query-form fix">
+                    <form id="queryForm">
+                        <span id="baseForm">
+                            <div class="col-xs-3">
+                                <div class="form-control">
+                                    <span class="label">
+                                        <label>
+                                            所属年级
+                                        </label>
+                                    </span>
+                                    <input id="njWrap" type="text"
+                                        data-role="dropdownlist" 
+                                        data-text-field="mc" 
+                                        data-value-field="dm" 
+                                        data-option-label="全部"
+                                        data-bind="source: njSource,
+                                            value: formObj.nj" 
+                                        name="nj">
+                                </div>
+                            </div>
+                            <div class="col-xs-3">
+                                <div class="form-control">
+                                    <span class="label">
+                                        <label>
+                                            所属系部
+                                        </label>
+                                    </span>
+                                    <input id="xbWrap" type="text"
+                                        data-role="dropdownlist" 
+                                        data-option-label="全部"
+                                        data-bind="source: xbSource,
+                                            value: formObj.xb" 
+                                        data-cascade-from="njWrap" 
+                                        data-cascade-from-field="xbbm" 
+                                        name="xb">
+                                </div>
+                            </div>
+                            <div class="col-xs-3">
+                                <div class="form-control">
+                                    <span class="label">
+                                        <label>
+                                            所属专业
+                                        </label>
+                                    </span>
+                                    <input id="zyWrap" type="text"
+                                        data-role="dropdownlist" 
+                                        data-option-label="全部"
+                                        data-bind="source: zySource,
+                                            value: formObj.zy" 
+                                        data-cascade-from="xbWrap" 
+                                        data-cascade-from-field="value" 
+                                        name="zy">
+                                </div>
+                            </div>
+                            <div class="col-xs-3">
+                                <div class="form-control">
+                                    <span class="label">
+                                        <label>
+                                            所属班级
+                                        </label>
+                                    </span>
+                                    <input id="bjWrap" type="text"
+                                        data-role="dropdownlist" 
+                                        data-option-label="全部"
+                                        data-bind="source: bjSource,
+                                            value: formObj.bj" 
+                                        data-cascade-from="zyWrap" 
+                                        data-cascade-from-field="value" 
+                                        name="bj">
+                                </div>
+                            </div>
+                            <div class="col-xs-3">
+                                <div class="form-control">
+                                    <span class="label">
+                                        <label>按姓名</label>
+                                    </span>
+                                    <input type="text" 
+                                        name="xm" 
+                                        data-role="textbox"
+                                        placeholder="请输入姓名" 
+                                        data-bind="value: formObj.xm">
+                                </div>
+                            </div>
+                            <div class="col-xs-3">
+                                <div class="form-control">
+                                    <span class="label">
+                                        <label>事件名称</label>
+                                    </span>
+                                    <input type="text" 
+                                        name="sj" 
+                                        data-role="textbox"
+                                        placeholder="请输入事件名称" 
+                                        data-bind="value: formObj.sj">
+                                </div>
+                            </div>
+                        </span>
+                        <!--按钮-->
+                        <span class="button-wrap">
+                            <button type="button" class="btn btn-normal" data-bind="click: queryClick">查询</button>
+                            <span class="advanced-search " data-bind="click: advancedSearch, css: {advanced-search-down: searchShow}">高级搜索</span>
+                        </span>
+                        <div class="searchShow-wrap search-hide" data-bind="css: {search-show: searchShow}">
+                            <div class="col-xs-3">
+                                <div class="form-control">
+                                    <span class="label">
+                                        <label>兴趣</label>
+                                    </span>
+                                    <input type="text" 
+                                        name="xq" 
+                                        data-role="textbox"
+                                        placeholder="请输入高级搜索" 
+                                        data-bind="value: formObj.xq">
+                                </div>
+                            </div>
+                            <div class="col-xs-3">
+                                <div class="form-control">
+                                    <span class="label">
+                                        <label>
+                                            性别
+                                        </label>
+                                    </span>
+                                    <input type="text"
+                                        data-role="dropdownlist" 
+                                        data-option-label="全部"
+                                        data-bind="source: sexSource,
+                                            value: formObj.sex" 
+                                        name="sex">
+                                </div>
+                            </div>
+                            <div class="col-xs-3">
+                                <div class="form-control">
+                                    <span class="label">
+                                        <label>
+                                            登记时间
+                                        </label>
+                                    </span>
+                                    <div class="date-wrap">
+                                        <input type="text" 
+                                            data-role="datepicker" 
+                                            name="djsj" 
+                                            data-max-date="$now" 
+                                            data-bind="value: formObj.djsj" 
+                                            data-format="yyyy-MM-dd" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-6">
+                                <div class="form-control">
+                                    <span class="label">
+                                        <label>
+                                            办结时间
+                                        </label>
+                                    </span>
+                                    <div class="date-link">
+                                        <div class="date-left">
+                                            <input type="text" 
+                                                id="startTimeId" 
+                                                data-role="datepicker" 
+                                                name="startTime" 
+                                                data-max-date="#endTimeId" 
+                                                data-bind="value: formObj.startTime" 
+                                                data-format="yyyy-MM-dd" />
+                                        </div>
+                                        <div class="date-right">
+                                            <input type="text" 
+                                                id="endTimeId" 
+                                                data-role="datepicker" 
+                                                name="endTime" 
+                                                data-min-date="#startTimeId" 
+                                                data-max-date="$now" 
+                                                data-bind="value: formObj.endTime" 
+                                                data-format="yyyy-MM-dd" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!--查询区域-->
+        <!--列表展示-->
+        <div class="list-box">
+            <!--列表头部-->
+            <div class="list-title">
+                <span class="list-tab" 
+                    data-bind="source: listTabSource" 
+                    data-template="listTabTemp">
+                </span>
+                <div class="table-option">
+                    <button type="button" class="btn btn-option option-add" data-bind="click: addClick"><div class="option-icon "></div>新增</button>
+                    <button type="button" class="btn btn-option option-edit" data-bind="click: editClick"><div class="option-icon"></div>编辑</button>
+                    <button type="button" class="btn btn-option option-export" data-bind="click: exportClick"><div class="option-icon"></div>导出</button>
+                </div>
+            </div>
+            <!--列表信息-->
+            <div class="table-box">
+                <table class="list-table">
+                    <thead>
+                        <tr>
+                            <th width="80px" class="first-checkbox">
+                                <span class="select-default" 
+                                    data-bind="click: selectAllClick, 
+                                    css: {select-check: selectAllFlag}">全选</span>
+                            </th>
+                            <th>序号</th>
+                            <th>审批状态</th>
+                            <th>学生姓名</th>
+                            <th>所属年级</th>
+                            <th>所属专业</th>
+                            <th>创建时间</th>
+                            <th>审批时间</th>
+                            <th>审批人</th>
+                            <th class="opt-table" width="220">操作</th>
+                        </tr>
+                    </thead>
+                    <tbody data-bind="source: listTable" data-template="listTable"></tbody>
+                </table>
+            </div>
+            <!-- 分页展示区域 -->
+            <div data-role="pagination" data-bind="source: listTable"></div>
+        </div>
+        <!--列表展示-->
+    </div>
+    <!--主容器-->
+    <script src="../js/plugins/require-2.1.11.js" data-main="../js/apps/pages/list.js"></script>
+    <script id="listTabTemp" type="text/html">
+        {{each $data as obj}}
+            <span class="tab-span" data-bind="click: listTabClick, css: {tab-spaned: checked}">{{obj.text}}</span>
+        {{/each}}
+    </script>
+    <!-- 列表 的模板-->
+    <script id="listTable" type="text/html">
+        {{each $data as obj i}}
+            <tr>
+                <td class="first-checkbox">
+                    <span class="select-default" 
+                        data-bind="click: checkboxNodeClick, 
+                        css: {select-check: checked}"> </span>
+                </td>
+                <td><div class="ell" 
+                    title="{{obj._index}}">{{obj._index}}</div></td>
+                <td><div class="ell" 
+                    title="{{obj.spzt}}">{{obj.spzt}}</div></td>
+                <td><div class="ell" 
+                    title="{{obj.xm}}">{{obj.xm}}</div></td>
+                <td><div class="ell" 
+                    title="{{obj.nj}}">{{obj.nj}}</div></td>
+                <td><div class="ell" 
+                    title="{{obj.zy}}">{{obj.zy}}</div></td>
+                <td><div class="ell" 
+                    title="{{obj.cjsj}}">{{obj.cjsj}}</div></td>
+                <td><div class="ell" 
+                    title="{{obj.spsj}}">{{obj.spsj}}</div></td>
+                <td><div class="ell" 
+                    title="{{obj.spr}}">{{obj.spr}}</div></td>
+                <td>
+                    <div class="opt-table opt-max{{obj.maxNum}}">
+                        <span class="opt-more-wrap {{if obj.maxNum < 4}}hide{{/if}}">
+                            <div class="more-container pos-rel abc">
+                                <div class="more-opt cursor-p"></div>
+                                <!-- 竖项 -->
+                                <div class="more-opt-container pos-abs dis-no">
+                                    <div class="more-container-left"></div>
+                                    <div class="more-container-center">
+                                        <div class="opt-list fix">
+                                            <span class="opt-name fl ell" data-bind="click: optClick" title="操作1">操作1</span>
+                                            <span class="opt-name fl ell" data-bind="click: optClick" title="操作2">操作2</span>
+                                        </div>
+                                    </div>
+                                    <div class="more-container-right fl"></div>
+                                    <div class="clear"></div>
+                                </div> 
+                            </div>
+                        </span>
+                        <button type="button" class="btn-default btn-lg" title="退回" data-bind="click: optClick">退回</button>
+                        <button type="button" class="btn-default btn-lg" title="导出" data-bind="click: optClick">导出</button>
+                        <button type="button" class="btn-default btn-lg" title="查看" data-bind="click: optClick">查看</button>
+                    </div>
+                </td>
+            </tr>
+        {{/each}} 
+    </script>
+</body>
+</html>

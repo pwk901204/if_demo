@@ -1,0 +1,17 @@
+ {
+   "name": "select",
+   "version": "1.0.0",
+   "description": "flyui select",
+   "main": "select.js",
+   "files": [
+     "select.css",
+     "select.js",
+     "listbox.js",
+     "staticlist.js"
+   ],
+   "dependencies": {
+     "flyui/popup": "1.0.0",
+     "lib/fly": "1.2.6",
+     "lib/jquery": "1.8.2"
+   }
+ }

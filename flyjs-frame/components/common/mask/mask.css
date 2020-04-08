@@ -1,0 +1,65 @@
+/* mask */
+
+.has-mask {
+    position: relative;
+}
+
+.fly-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    z-index: 9997;
+}
+
+.fly-mask-background {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    z-index: 9998;
+    filter: alpha(opacity=30);
+    opacity: 0.3;
+}
+
+.fly-mask-background iframe {
+    width: 100%;
+    height: 100%;
+    filter: alpha(opacity=0);
+    opacity: 0;
+}
+
+.fly-mask-content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 9999;
+}
+
+.fly-mask-content div {
+    padding: 10px 20px;
+    font-size: 12px;
+    line-height: 16px;
+    background-color: #fff;
+    border-radius: 4px;
+}
+
+.fly-mask-content div i,
+.fly-mask-content div em {
+    display: inline-block;
+    height: 16px;
+    font-style: normal;
+    vertical-align: top;
+}
+
+.fly-mask-content div i {
+    background: url(loading.gif);
+    width: 16px;
+}
+
+.fly-mask-content div em {
+    margin-left: 8px;
+    color: #333;
+}

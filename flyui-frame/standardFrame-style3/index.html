@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>标准化页面框架</title>
+    <link rel="stylesheet" href="../js/plugins/flyui/css/flyui.css">
+    <link rel="stylesheet" type="text/css" href="css/common/common.css">
+    <link rel="stylesheet" type="text/css" href="css/common/base.css">
+    <link rel="stylesheet" type="text/css" href="css/common/site.css">
+    <link rel="stylesheet" type="text/css" href="css/frame/default.css">
+    <link rel="stylesheet" href="css/frame/orange.css">
+    <link rel="stylesheet" href="css/frame/blue.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="container-header">
+            <div class="logo">
+                <span class="logo-name">
+                    <span class="logo-text">实习管理系统</span>
+                </span>
+            </div>
+
+            <!--头部导航 方案1/2-->
+            <div class="nav nav-scheme" id="navId"></div>
+
+            <!--登录用户 方案1/2-->
+            <div class="user-wrap">
+                <img src="img/common/student.png" alt="FANG" width="46px" height="46px">
+                <span class="welcome-text">
+                    <em>FANG</em>，欢迎您！</span>
+                <span class="user-exit" data-bind="click: userExit">退出登录</span>
+            </div>
+        </div>
+        <div class="container-bottom">
+            <!--左侧菜单-->
+            <div class="menu-left-content">
+                <div class="menu-left-content-fristInfo1 nav-scheme"></div>
+            </div>
+            <!--iframe-->
+            <div class="container-content">
+                <iframe id="pageFrame" name="pageFrame" src="" frameborder="0" scrolling="auto" width="100%" height="100%" style="display: block;"></iframe>
+            </div>
+
+            <div class="system-footer">版权所有 @ 科大讯飞股份有限公司</div>
+            <div style="clear:both"></div>
+        </div>
+    </div>
+</body>
+
+<!--头部导航菜单-->
+<script type="text/html" id="navTempl">
+    <div class="nav-warp">
+        {{each $data as item i}}
+        <div class="nav-item{{if item.isSelect == true}} nav-item-selected{{/if}}" title="{{item.navName}}" data-url="{{item.url}}"
+            data-code="{{item.authCode}}">
+            <div class="nav-content">
+                <div class="nav-img nav-img-{{item.icon}}"></div>
+                <div class="nav-text">
+                    <span class="nav-item-name">{{item.navName}}</span>
+                    <span class="unselected-mark {{if item.isSelect == true}} selected-mark {{/if}}"></span>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</script>
+
+<!--方案1/2左侧菜单-->
+<script type="text/html" id="leftMenuTempl">
+    {{each $data as item i}}
+    <div class="menu-left-info nav-scheme {{if item.isSelect == true}}menu-left-selected{{/if}}">
+        <div class="firstMenu {{if item.isSelect == true}}menu-selected{{/if}}">
+            <span class="first-menu first-menu-{{item.icon}}"></span>
+            <span class="first-menu-name">{{item.name}}</span>
+            <span class="menu-up {{if item.isSelect == true}}menu-down{{/if}}"></span>
+        </div>
+        <ul class="menu-left-ul {{if item.isSelect == false}}ul-show-style{{/if}}">
+            {{each item.item as subItem j}}
+            <li class="menu-left-ul-li {{if subItem.isSelect == true}}subItem-selected{{/if}}" data-url="{{subItem.url}}">
+                <span class="subItem-name ell" title="{{subItem.name}}">{{subItem.name}}</span>
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+    {{/each}}
+</script>
+
+
+<script src="js/plugins/require-2.1.11.js" data-main="js/apps/pages/index.js"></script>
+
+</html>

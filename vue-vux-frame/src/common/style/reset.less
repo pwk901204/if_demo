@@ -1,0 +1,199 @@
+@charset "utf-8";
+/*
+ * reset.css
+ * @author shangao
+ * @time 2019-04-15
+ */
+html ,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* 常用元素 */
+body ,
+div ,
+p ,
+dl ,
+dt ,
+dd ,
+ul ,
+ol ,
+li ,
+h1 ,
+h2 ,
+h3 ,
+h4 ,
+h5 ,
+h6 ,
+form {
+  margin: 0;
+  padding: 0;
+}
+img ,
+abbr ,
+acronym {
+  border: none;
+}
+h1 ,
+h2 ,
+h3 ,
+h4 ,
+h5 ,
+h6 {
+  font-weight: normal;
+}
+
+ol ,
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  outline: 0;
+}
+a:hover {
+  text-decoration: none;
+}
+input {
+  outline: none;
+}
+textarea {
+  resize: none;
+}
+.hide ,
+.hidden {
+  display: none;
+}
+/* 浮动 */
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.fn {
+  float: none;
+}
+/* 清除浮动 */
+.clear {
+  clear: both;
+  overflow: hidden;
+  height: 0;
+}
+.clearfix {
+  display: block;
+  zoom: 1;
+}
+.clearfix:after {
+  display: block;
+  visibility: hidden;
+  clear: both;
+  height: 0;
+  content: " ";
+  font-size: 0;
+}
+
+/* 文字溢出省略 */
+.ell ,
+.ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.ell.db {
+  display: block;
+}
+/* 文字对齐方式 */
+.text-left ,
+.tal {
+  text-align: left;
+}
+.text-center ,
+.tac {
+  text-align: center;
+}
+.text-right ,
+.tar {
+  text-align: right;
+}
+/* table */
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+table tr ,
+table th ,
+table td {
+  border-collapse: collapse;
+}
+/* 去除chrome记住密码输入框背景色为黄色 */
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #fff inset;
+}
+/* 去除input蓝色边框 */
+input {
+  outline: 0;
+}
+/* 去除IEinput x */
+::-ms-clear ,
+::-ms-reveal {
+  display: none;
+}
+
+// placeholder
+input:-webkit-input-placeholder {
+  color: #bfbfbf;
+}
+input:-moz-placeholder {
+  color: #bfbfbf;
+}
+input:-moz-placeholder {
+  color: #bfbfbf;
+}
+input:-ms-input-placeholder {
+  color: #bfbfbf;
+}
+
+// /* IE6 fixed 解决闪动 */
+// *html {
+//   background-image: url(about:blank);
+//   background-attachment: fixed;
+// }
+
+// vux reset
+
+#app {
+  // tabbar
+  .weui-tabbar {
+    height: 54px;
+  }
+  .weui-tabbar:before {
+    color: #ddd;
+    border-top-color: #ddd;
+  }
+  .weui-tabbar__item {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 0;
+  }
+  .weui-tabbar__icon {
+    width: 26px;
+    height: 26px;
+    margin-bottom: 3px;
+    line-height: 1;
+  }
+  .weui-tabbar__label {
+    font-size: 14px;
+    line-height: 1;
+    color: #999;
+  }
+  .weui-tabbar__item.weui-bar__item_on .weui-tabbar__icon ,
+  .weui-tabbar__item.weui-bar__item_on .weui-tabbar__icon > i ,
+  .weui-tabbar__item.weui-bar__item_on .weui-tabbar__label {
+    color: #157efb;
+  }
+}
+

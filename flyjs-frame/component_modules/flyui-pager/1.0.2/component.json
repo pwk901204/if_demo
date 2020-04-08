@@ -1,0 +1,16 @@
+ {
+   "name": "pager",
+   "version": "1.0.2",
+   "description": "flyui pager",
+   "main": "pager.js",
+   "files": [
+     "pager.tpl",
+     "pager.less",
+     "pager.js"
+   ],
+   "dependencies": {
+      "lib/fly": "1.2.6",
+      "lib/jquery": "1.8.2",
+      "flyui/dropdown": "1.0.0"
+   }
+ }

@@ -1,0 +1,1397 @@
+input {
+    border: none;
+}
+
+/**
+ * 按钮添加动态效果 
+ */
+.btn-default,
+.opt-name,
+.btn {
+    position: relative;
+}
+
+.opt-name:focus,
+.btn-default:focus,
+.btn:focus{
+    outline: none;
+}
+
+.opt-name:after ,
+.btn-default:after ,
+.btn:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -6px;
+    left: -6px;
+    right: -6px;
+    bottom: -6px;
+    pointer-events: none;
+    background-color: #3094f9;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    border-radius: 2px;
+    opacity: 0;
+    transition: all .3s;
+}
+
+.opt-name:active:after,
+.btn-default:active:after,
+.btn:active:after {
+    opacity: .7;
+    top: -1px;
+    left: -1px;
+    right: -1px;
+    bottom: -1px;
+    transition: 0s;
+}
+
+.searchShow-wrap {
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+}
+
+.search-hide {
+    display: none;
+}
+
+.search-show {
+    display: block;
+}
+
+.query-bg {
+    padding-bottom: 10px;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    background-color: #f5f5f5;
+}
+
+.list-tab {
+    display: inline-block;
+    height: 49px;
+}
+
+.list-tab .tab-span {
+    padding: 0 18px;
+    display: inline-block;
+    height: 49px;
+    line-height: 49px;
+    font-size: 16px;
+    color: #4c4c4c;
+    cursor: pointer;
+}
+
+.list-tab .tab-spaned {
+    border-bottom: 2px solid #3094f9;
+}
+
+.list-optionlabel, .list .item {
+    margin-top: 10px;
+    line-height: 24px;
+    min-height: 24px;
+    border: none;
+    /* border-width: 1px; */
+    font-size: 12px;
+}
+
+/* 下拉框 配色 */
+.state-selected, .state-selected:link, .state-selected:visited {
+    background-color: #3094f9;
+    border-color: #3094f9;
+}
+
+
+/**
+ * 复选框 
+ */
+.select-default,
+.select-check {
+    float: left;
+    display: inline-block;
+    position:;
+    /* min-width: 50px; */
+    height: 20px;
+    line-height: 20px;
+    padding-left: 22px;
+    /* padding: 0 20px 0 22px; */
+    cursor: pointer;
+    background: url(../../img/common/checkbox-default.png) no-repeat left center;
+}
+
+.select-check {
+    background: url(../../img/common/checkbox-selected.png) no-repeat left center;
+}
+
+span.select-default.select-check {}
+
+/**
+ * 禁用样式 
+ */
+.select-default[disabled],
+.select-default-disabled {
+    color: #999;
+    cursor: default;
+    background: url(../../img/common/select-default-disabled.png) no-repeat left center;
+}
+
+.select-check[disabled],
+.select-check-disabled {
+    background: url(../../img/common/select-check-disabled.png) no-repeat left center;
+}
+
+/**
+ * 组件页面 
+ */
+.components-wrap {
+    /* padding: 50px; */
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+}
+
+.components-wrap h2 {
+    padding: 0 20px;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 40px;
+}
+
+.components-node {
+    float: left;
+    margin: 0 20px 20px;
+    display: inline-block;
+    border: 1px solid #e5e5e5;
+    min-width: 250px;
+    max-width: 380px;
+    min-height: 260px;
+    border-radius: 2px;
+}
+
+.components-title {
+    padding: 0 20px;
+    width: 100%;
+    height: 41px;
+    line-height: 40px;
+    border-bottom: 1px solid #e5e5e5;
+    background-color: #f5f5f5;
+    font-size: 14px;
+    color: #4c4c4c;
+}
+
+.components-body {
+    padding: 20px;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    word-spacing: 20px;
+}
+
+.components-btn,
+.radio-wrap,
+.checkbox-wrap {
+    overflow: hidden;
+    padding: 10px; 
+    width: 100%;
+    height: auto;
+}
+
+.radio-wrap .radio-default {
+    padding: 0 10px 0 24px;
+    float: left;
+    display: inline-block;
+    position: relative;
+    position:;
+    height: 24px;
+    line-height: 24px;
+    font-size: 12px;
+    color: #4c4c4c;
+    cursor: pointer;
+    background: url(../../img/common/radio-default.png) no-repeat left center;
+}
+
+.radio-wrap .radio-default:hover, 
+.radio-wrap .radio-hover {
+    background: url(../../img/common/radio-hover.png) no-repeat left center;
+}
+
+.radio-wrap .radio-selected,
+.radio-wrap .radio-selected:hover {
+    background: url(../../img/common/radio-selected.png) no-repeat left center;
+}
+
+/**
+ * 添加点击动态效果 
+ */
+.select-default .icon-node,
+.radio-wrap .radio-default .icon-node {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -7px;
+    width: 14px;
+    height: 14px;
+}
+
+.select-default .icon-node:focus,
+.radio-wrap .radio-default .icon-node:focus {
+    outline: none;
+}
+
+.select-default .icon-node:after,
+.radio-wrap .radio-default .icon-node:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    right: -8px;
+    bottom: -8px;
+    border-radius: 50%;
+    pointer-events: none;
+    background-color: #3094f9;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    opacity: 0;
+    transition: all .3s;
+}
+
+.select-default .icon-node:after {
+    border-radius: 0;
+}
+
+.select-default:active .icon-node:after,
+.radio-wrap .radio-default:active .icon-node:after {
+    opacity: .3;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: 0s;
+}
+
+.radio-wrap .radio-default[disabled],
+.radio-wrap .radio-default[disabled]:hover,
+.radio-wrap .radio-default-disabled,
+.radio-wrap .radio-default-disabled:hover {
+    color: #999;
+    cursor: default;
+    background: url(../../img/common/radio-default-disabled.png) no-repeat left center;
+}
+
+.radio-wrap .radio-selected[disabled],
+.radio-wrap .radio-selected[disabled]:hover,
+.radio-wrap .radio-selected-disabled,
+.radio-wrap .radio-selected-disabled:hover {
+    background: url(../../img/common/radio-selected-disabled.png) no-repeat left center;
+}
+
+.radio-wrap .radio-default[disabled] .icon-node:after,
+.radio-wrap .radio-default-disabled .icon-node:after,
+.radio-wrap .radio-selected[disabled] .icon-node:after,
+.radio-wrap .radio-selected-disabled .icon-node:after,
+.select-default[disabled] .icon-node:after,
+.select-default-disabled .icon-node:after {
+    background: none;
+    display: none;
+}
+
+.checkbox-wrap .select-default {
+    padding: 0 10px 0 22px;
+    position: relative;
+}
+
+/**
+ * 提示样式修改
+ */
+.alert-container {
+    text-align: center;
+}
+
+.alert-container .alert {
+    display: inline-block;
+    width: auto;
+    height: 40px;
+    max-width: 80%;
+    min-width: 0;
+}
+
+.alert-container .alert i,
+.alert-container .alert a {
+    margin-left: 16px;
+    float: left;
+    width: 16px;
+    height: 16px;
+    min-width: 0;
+}
+
+.alert-container .alert-success i,
+.alert-container .alert-success a {
+    background: url(../../img/common/tip-suc.png) no-repeat center center;
+}
+
+.alert-container .alert-danger i,
+.alert-container .alert-warning i,
+.alert-container .alert-danger a,
+.alert-container .alert-warning a {
+    background: url(../../img/common/tip-danger.png) no-repeat center center;
+}
+
+.alert-container .alert span {
+    padding: 0 16px 0 8px;
+    margin-left: 32px;
+    display: inline-block;
+    height: 40px;
+    line-height: 38px;
+}
+
+.alert-container .alert-success {
+    color: #6dbe57;
+    border-color: #daefdd;
+    background-color: #daefdd;
+}
+
+.alert-container .alert-danger,
+.alert-container .alert-warning {
+    color: #ff9a40;
+    border-color: #fff1ed;
+    background-color: #fff1ed;
+}
+
+.alert-container .alert {
+    padding-right: 10px;
+    line-height: 23px;
+    text-indent: -12px;
+}
+
+.alert-container .alert .close {
+    float: left;
+    top: 4px;
+    left: -20px;
+}
+
+/**
+ * 弹框样式 
+ */
+.dialog-tip .dialog-body .dialog-content {
+    display: table;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.dialog-tip .dialog-body .dialog-content span.confirm-span {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 16px;
+    color: #4c4c4c;
+}
+
+
+/*-------- 遮罩样式 begin--------- */
+
+.fly-mask {
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999999999;
+    display: table;
+}
+
+.fly-mask-background {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    opacity: 0.65;
+    filter: alpha(opacity=65);
+}
+
+.fly-mask iframe {
+    display: none;
+}
+
+.fly-mask-content {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.fly-mask-content > div {
+    display: inline-block;
+    width: 200px;
+    height: 60px;
+    background: #fff;
+    border-radius: 5px;
+}
+
+.fly-mask-content>div>span {
+    padding: 15px;
+    background: url(../../img/icon/loading.gif) no-repeat left center;
+    padding-left: 30px;
+    line-height: 30px;
+    display: inline-block;
+    font-size: 14px;
+    color: #4c4c4c;
+}
+
+/* img */
+.fly-mask .fly-mask-content i{
+    padding-right: 10px;
+    float: right;
+    cursor: pointer;
+}
+
+
+/*-------- 遮罩样式 end--------- */
+
+.row {
+    margin: 0;
+    padding: 10px;
+}
+
+.row h3 {
+    padding: 0 10px;
+}
+/*分页按钮样式 还原修复*/
+.clearfix .btn {
+    padding: 0 8px;
+    height: 25px;
+    min-width: 26px;
+    line-height: 23px;
+    border-radius: 2px;
+}
+/** 公共按钮样式 */
+.btn {
+    padding: 0 26px;
+    font-size: 14px;
+    height: 31px;
+    line-height: 29px;
+    border-radius: 2px;
+    vertical-align: initial;
+}
+
+.clearfix .prev,
+.clearfix .next {
+    padding: 0 11px;
+}
+
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn.active.focus {
+    outline: 0 auto -webkit-focus-ring-color;
+}
+
+
+/** 基本的纯色按钮，这里默认是蓝色 */
+.btn-normal {
+    position: relative;
+    background-color: #3094f9;
+    color: #fff;
+    box-shadow: 0px 2px 2px #e5e5e5;
+}
+
+.btn-normal:hover,
+.btn-normal:focus,
+.btn-normal:active,
+.btn-normal-hover {
+    background-color: #3989f3;
+    color: #fff;
+}
+
+.btn-cancel {
+    background-color: #fff;
+    border: 1px solid #cdcdcd;
+    color: #4c4c4c;
+}
+
+.btn-cancel:hover,
+.btn-cancel:focus,
+.btn-cancel:active,
+.btn-cancel-hover {
+    background-color: #f5f5f5;
+}
+
+.btn-cancel:after {
+    background-color: #cdcdcd;
+}
+
+
+/** 操作按钮样式 */
+.btn-option {
+    padding: 0 15px 0 35px;
+    position: relative;
+    background-color: #fff;
+    border: 1px solid #3094f9;
+    color: #3094f9;
+    font-size: 14px;
+    height: 31px;
+    line-height: 29px;
+}
+
+.btn-option:hover,
+.btn-option:focus,
+.btn-option:active,
+.option-add-hover {
+    background-color: #edf8ff;
+    color: #3094f9;
+}
+
+
+/** 操作按钮小图标公共样式 */
+.option-icon {
+    top: 8px;
+    left: 16px;
+    position: absolute;
+    width: 14px;
+    height: 14px;
+}
+
+
+/** 新增按钮 */
+.option-add .option-icon {
+    background: url(../../img/common/option-add.png) no-repeat center center;
+}
+
+/** 编辑按钮 */
+.option-edit .option-icon {
+    background: url(../../img/common/option-edit.png) no-repeat center center;
+}
+
+
+/** 导出按钮 */
+.option-export .option-icon {
+    background: url(../../img/common/option-export.png) no-repeat center center;
+}
+
+
+/** 灰色默认颜色 */
+.btn-lg {
+    height: 25px;
+    line-height: 23px;
+}
+.btn-default {
+    padding: 0 12px;
+    border: 1px solid #cdcdcd;
+    color: #4c4c4c;
+    font-size: 12px;
+    /* float: left; */
+    /* margin-right: 0px; */
+}
+
+.btn-default:hover,
+.btn-default:focus,
+.btn-default:active {
+    border: 1px solid #3094f9;
+    background-color: #3094f9;
+    color: #fff;
+}
+
+.opt-table .btn-default {
+    float: right;
+    margin-left: 4px;
+}
+
+.opt-more-wrap {
+    margin-left: 4px;
+    float: right;
+    display: inline-block;
+    width: 24px;
+    height: 25px;
+    cursor: pointer;
+}
+
+input[type="checkbox"] {
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+/** 选项卡的整体包裹区域 */
+.tab-wrap {
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid #d6dce5;
+    background: #fff;
+}
+
+.tab-body {
+    padding: 8px 0;
+    width: 100%;
+    background: #fff;
+    /*height: 160px;*/
+    /*border: 1px solid #f4f9fc;*/
+}
+
+.tab-node {
+    float: left;
+    width: 112px;
+    height: 49px;
+    background: #fff;
+    line-height: 50px;
+    text-align: center;
+    font-size: 14px;
+    color: #4c5f70;
+    cursor: pointer;
+}
+
+.tab-node:hover {
+    background: #d6dde5;
+    color: #4c5f70;
+}
+
+.tab-selected,
+.tab-selected:hover {
+    height: 50px;
+    background: #fff;
+    border-top: 2px solid #3094f9;
+    color: #0f273f;
+}
+/* 弹框的样式 默认是蓝色的*/
+.dialog .dialog-header {
+    height: 30px;
+    font-size: 12px;
+    color: #fff;
+    background-color: #3094f9;
+}
+.dialog .dialog-title {
+    padding: 6px 14px;
+    line-height: 1.5;
+    font-weight: initial;
+}
+.dialog .dialog-close {
+    top: 8px;
+    right: 12px;
+    width: 14px;
+    height: 14px;
+    background: url(../../img/common/dialog-close.png) no-repeat center center;
+    color: #fff;
+    font-size: 18px;
+    opacity: initial;
+    font-weight: initial;
+}
+.dialog .dialog-footer {
+    padding: 9px  10px;
+    background-color: #f5f5f5;
+}
+.dialog .dialog-button {
+    float: inherit;
+    text-align: center;
+}
+.dialog .dialog-footer button {
+    padding: 0 25px;
+    font-size: 14px;
+    height: 31px;
+    line-height: 29px;
+    border-radius: 2px;
+}
+.dialog-footer button.dialog-autofocus {
+    background-color: #3094f9;
+    border-color: #3094f9;
+}
+.dialog-footer button.dialog-autofocus:hover, 
+.dialog-footer button.dialog-autofocus:focus, 
+.dialog-footer button.dialog-autofocus:active {
+    background-color: #3094f9;
+    border-color: #3094f9;
+}
+.dialog-content-tip-list {
+    color: #333;
+    width: 150px;
+    height: 80px;
+    line-height: 80px;
+    font-size: 14px;
+}
+.dialog-content-top-tip {
+    color: #333;
+    width: 100%;
+    height: 50px;
+    line-height: 70px;
+    font-size: 14px;
+}
+.dialog-content-bottom-tip {
+    color: #999;
+    width: 100%;
+    height: 30px;
+    line-height: 20px;
+    font-size: 12px;
+}
+.dialog-content-list {
+    padding: 10px 0px;
+}
+.dialog-type-confirm {
+    width: 110px;
+    height: 80px;
+}
+.dialog-confirm-success {
+    background: url(../../img/icon/confirm-success.png) right center no-repeat;
+}
+.dialog-confirm-fail {
+    background: url(../../img/icon/confirm-fail.png) right center no-repeat;
+}
+.dialog-confirm-delete {
+    background: url(../../img/icon/confirm-delete.png) right center no-repeat;
+}
+.dialog-confirm-wrong {
+    background: url(../../img/icon/confirm-wrong.png) right center no-repeat;
+}
+.dialog {
+    border: none;
+    /* overflow: hidden; */
+    border-radius: 4px;
+}
+/*数据加载失败*/
+.empty-data-show {
+    margin: 20px auto;
+    width: 130px;
+    height: 140px;
+    background: url(../../img/icon/empty-data.png) no-repeat center center;
+}
+/*输入框 样式定义*/
+.textbox .textbox-wrap, 
+.textbox .dropdown-wrap, 
+.textbox .datepicker-wrap {
+    border: none;
+}
+.textbox .input {
+    border: 1px solid #cdcdcd;
+    border-radius: 2px;
+    /* box-sizing: content-box; */
+    color: #999;
+    height: 32px;
+    line-height: 24px;
+}
+.textbox .input:hover,
+.textbox .input:focus {
+    border: 1px solid #26a1ff;
+    border-radius: 2px;
+    color: #4c4c4c;
+}
+.textbox input.error,
+.textbox input.error:hover,
+.textbox input.error:focus {
+    border: 1px solid #f92f2f;
+    border-radius: 2px;
+    box-shadow: 0px 0px 5px rgba(252, 105, 107, 0.65);
+    color: #f92f2f;
+}
+.textbox-wrap, .dropdown-wrap, .datepicker-wrap {
+    border-color: #cdcdcd;
+    border-radius: 2px;
+    background-color: #fff;
+}
+.state-hover, .state-hover:hover {
+    border-color: #26a1ff;
+    border-radius: 2px;
+    background-color: #fff;
+    color: #4c4c4c;
+}
+
+div.state-hover, div.state-hover:hover, 
+li.state-hover, li.state-hover:hover{
+    padding: 0 10px;
+    background-color: #f5f5f5;
+    border-color: #f5f5f5;
+    color: #666;
+    border: none;
+}
+
+div.state-selected:hover, 
+li.state-selected:hover {
+    background-color: #3094f9;
+    border-color: #3094f9;
+    color: #fff;
+    border: none;
+}
+
+li.state-hover, li.state-hover:hover{
+    border-width: 1px;
+}
+
+
+.widget .input {
+    color: #999;
+    font-size: 12px;
+}
+
+.widget .state-hover .input {
+    color: #4c4c4c;
+}
+
+.widget .select {
+    border-left: none;
+}
+
+.errorWrap .dropdown-wrap,
+.errorWrap .datepicker-wrap {
+    border: 1px solid #f92f2f;
+    color: #f92f2f;
+}
+
+.errorWrap .dropdown-wrap .input,
+.errorWrap .datepicker-wrap .input {
+    color: #f92f2f;
+}
+
+/*下拉*/
+.dropdown-wrap .icon-triangle-down {
+    background: url(../../img/icon/dropdown-icon.png) no-repeat center center;
+}
+
+.state-border-down .icon-triangle-down {
+    background: url(../../img/icon/dropup-icon.png) no-repeat center center;
+}
+/*日期*/
+.date-link .datepicker .icon-calendar, .date-wrap .datepicker .icon-calendar {
+    background: url(../../img/icon/date-icon.png) no-repeat center center;
+}
+.popup.list-container { 
+    padding: 10px;
+    padding-top: 0;
+    background-color: #fff;
+}
+
+.calendar-container .calender {
+    padding: 0 0px;
+    width: 252px;
+    overflow: hidden;
+}
+
+.calender .switch {
+    padding: 3px 0;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.calender th.dow {
+    height: 30px;
+    background-color: #f5f5f5;
+    font-size: 12px;
+    color: #999;
+    border-bottom: none;
+}
+
+.calender th.border {
+    /* display: none; */
+    height: 2px;
+    border: none;
+}
+
+.calender td {
+    /* width: 26px; */
+    height: 26px;
+    /* border: 12px hidden #fff; */
+    border: 10px solid #fff;
+    border-top: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    overflow: hidden;
+    box-sizing: content-box;
+    /* border-radius: 12px; */
+}
+
+.calender td.year:hover, 
+.calender td.month:hover, 
+.calender td.day:hover, 
+.calender td.hour:hover, 
+.calender td.minute:hover, 
+.calender td.second:hover {
+    background: #fff url(../../img/common/data-hover.png) no-repeat center center;
+}
+
+.calender td.active,
+.calender td.active:hover,
+.calender td.active:active {
+    background: #fff url(../../img/common/date-select.png) no-repeat center center; 
+    color: #fff;
+    border-color: #fff;
+}
+
+.calender .control {
+    padding: 8px 10px;
+    background-color: #f5f5f5;
+    text-align: center;
+    word-spacing: 10px;
+}
+
+.calender .control .ok,
+.calender .control .cancel {
+    float: inherit;
+}
+
+.calender .control .cancel {
+    background-color: #fff;
+    border: 1px solid #cdcdcd;
+    color: #4c4c4c;
+}
+
+.calender .control .cancel:hover {
+    background-color: #f5f5f5;
+}
+
+.date-link {
+    width: 100%;
+    height: 30px;
+    background: url(../../img/common/date-link.png) no-repeat center center;
+}
+.date-left, .date-right {
+    float: left;
+    width: 50%;
+    height: 30px;
+}
+.date-left {
+    padding-right: 9px;
+}
+.date-right {
+    padding-left: 9px;
+}
+
+/* -- 输入框错误提示 -- */
+.popup-bottom-left .dialog-arrow-b, .popup-bottom .dialog-arrow-b, .popup-bottom-right .dialog-arrow-b {
+    border-bottom: 8px solid #000;
+}
+.popup-top-left .dialog-arrow-b, .popup-top .dialog-arrow-b, .popup-top-right .dialog-arrow-b {
+    border-top: 8px solid #000;
+}
+.popup-bottom-left .dialog, .popup-bottom .dialog, .popup-bottom-right .dialog,
+.popup-top-left .dialog, .popup-top .dialog, .popup-top-right .dialog {
+    background-color: #000;
+    color: #fff;
+    font-size: 12px;
+    opacity: 0.7;
+}
+/*-- --*/
+/*--------- 列表---------*/
+/*列表操作按钮容器*/
+.table-option {
+    float: right;
+    /* padding: 0 20px; */
+    padding-left: 20px;
+    word-spacing: 4px;
+}
+/*列表-当前位置*/
+.current-location {
+    padding-left: 20px;
+    height: 46px;
+    line-height: 46px;
+    font-size: 12px;
+}
+/*列表-高级搜索*/
+.advanced-search {
+    cursor: pointer;
+    display: inline-block;
+    width: 86px;
+    height: 31px;
+    line-height: 31px;
+    padding-left: 12px;
+    font-size: 12px;
+    /* padding-right: 8px; */
+    color: #999;
+    background: url(../../img/icon/dropdown-icon.png) 68px center no-repeat;
+}
+.advanced-search-down {
+    background: url(../../img/icon/dropup-icon.png) 68px center no-repeat; 
+}
+/*列表搜索区域*/
+.query-box {
+    padding-bottom: 10px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #e7e7e7;
+    background-color: #fff;
+}
+/*列表搜索表单*/
+.query-form {
+    position: relative;
+    padding-right: 20px;
+}
+
+.button-wrap {
+    display: inline-block;
+    height: 42px;
+    line-height: 42px;
+    float: right;
+}
+
+/*输入框的 margin (间距重写)*/
+.form-control {
+    margin: 5px 0;
+}
+/*列表搜索按钮区域*/
+.query-box-button {
+    right: 0;
+    bottom: 15px;
+    position: absolute;
+    width: 200px;
+    height: 30px;
+    text-align: center;
+}
+/*列表的表头*/
+.list-title {
+    padding: 0 20px 0 19px;
+    /* margin-top: 10px; */
+    width: 100%;
+    height: 48px;
+    line-height: 48px;
+    font-size: 16px;
+    color: #666;
+    /* background: url(../../img/icon/list-table-title.png) 20px center no-repeat; */
+    border-top: 1px solid #e7e7e7;
+    /* border-left: none; */
+    /* border-right: none; */
+    /* border-top: 10px solid #f8f8f8; */
+}
+/*table列表样式*/
+.table-box {
+    padding: 0 20px;
+    width: 100%;
+    height: auto;
+    /* border-top: 1px solid #f8f8f8; */
+}
+.list-table  {
+    width: 100%;
+    height: auto;
+    border-collapse: collapse;
+    /* table-layout: fixed; */
+}
+/**
+ * 表格内部样式 
+ */
+.list-table thead tr th,
+.list-table tbody tr td  {
+    padding: 0 6px;
+    margin:;
+    height: 42px;
+    line-height: 41px;
+    color: #666;
+    font-size: 12px;
+    text-align: left;
+    background-color: #fff;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.list-table thead tr th {
+    border-top: 1px solid #e6e6e6;
+    line-height: 40px;
+    font-size: 12px;
+    color: #4c4c4c;
+    font-weight: bold;
+    background-color: #f5f5f5;
+}
+
+.list-table tbody tr td {
+    height: 40px;
+    line-height: 40px;
+    color: #4c4c4c;
+}
+.list-table tbody tr td:hover,
+.list-table tbody tr:hover td,
+.list-table tbody tr.hover td {
+    background-color: #eaf7ff;
+}
+
+.list-table div.ell {
+    max-width: 150px;
+}
+
+.list-table thead tr th.first-checkbox,
+.list-table tbody tr td.first-checkbox {
+    padding-left: 14px;
+    /* text-align: center; */
+}
+
+.list-table thead tr .opt-table,
+.list-table tbody tr .opt-table {
+    text-align: center;
+    max-width: 220px;
+}
+
+.list-table tbody tr .opt-table {
+    text-align: right;
+    padding-right: 8px;
+}
+
+.pagination .info {
+    float: left;
+}
+
+.pagination .switch {
+    float: left;
+    display: inline-block;
+    padding-left: 10px;
+    height: 26px;
+    line-height: 26px;
+    overflow: hidden;
+}
+
+.pagination .switch .mydx-span {
+    float: left;
+    padding: 0 5px;
+}
+
+.pagination .switch .widget {
+    float: left;
+    height: 26px;
+    width: 60px;
+    overflow:;
+}
+
+.pagination .switch .widget:active,
+.pagination .switch .widget:focus,
+.pagination .switch .widget:hover,
+.pagination .switch .widget .state-default:active,
+.pagination .switch .widget .state-default:focus,
+.pagination .switch .widget .state-default:hover {
+    box-shadow: none;
+    outline: none;
+    outline-offset: 0;
+}
+
+.pagination .switch .widget .input {
+    height: 24px;
+    line-height: 16px;
+    padding: 4px 6px;
+}
+
+.pagination .switch .widget .icon {
+    top: -2px;
+}
+
+
+/*列表序号*/
+.table-number {
+    /* text-align: center; */
+}
+/*列表分页*/
+.clearfix {
+    margin: 0;
+    padding: 19px 34px;
+}
+/* 上下 排序样式*/
+.sorting-top-bottom {
+    display: inline-block;
+    width: 20px;
+    height: 10px;
+    background: url(../../img/icon/sorting-top-bottom.png) no-repeat right center;
+}
+/*--------- 列表---------*/
+
+.pagination .number {
+    /* padding-right: 14px; */
+    overflow: inherit;
+}
+
+
+/* 更多操作 */
+
+
+/* 常用样式 */
+.dis-inb {
+    display: inline-block;
+}
+.txt-ct {
+    text-align: center;
+}
+.color333 {
+    color: #333;
+}
+.color999 {
+    color: #999;
+}
+.dis-no {
+    display: none;
+}
+
+.ell {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.more-opt {
+    width: 24px;
+    height: 24px;
+    background: #fff url(../../img/icon/more-icon.png) no-repeat center center;
+}
+.more-opt:hover {
+    background: url(../../img/icon/more-icon-hover.png);
+}
+
+.more-opt:hover + .more-opt-container {
+    display: block;
+}
+
+.more-opt-container:hover {
+    display: block;
+}
+
+/*.mt100 {
+    cursor: pointer;
+    margin-top: 100px;
+}
+.ml800 {
+    margin-left: 800px;
+}
+*/
+.pos-rel {
+    position: relative;
+    width: 24px;
+    height: 25px;
+}
+.pos-abs {
+    position: absolute;
+}
+.btn-list-default {
+    padding: 0 10px;
+    height: 22px;
+    line-height: 22px;
+}
+.btn-brno {
+    position: relative;
+    top: 5px;
+    padding: 0;
+    width: 24px;
+    border: none;
+}
+.btn-brno:hover,
+.btn-brno:focus,
+.btn-brno:active {
+    border: none;
+    background-color: #fff;
+}
+/* 样式一*/
+.more-opt-container-right .more-container-left {
+    position: absolute;
+    width: 10px;
+    height: 41px;
+    background: url(../../img/icon/rectangle-left.png);
+    right: 240px;
+}
+.more-opt-container-right .more-container-center {
+    position: absolute;
+    width: auto;
+    height: 41px;
+    background: url(../../img/icon/rectangle-center.png);
+    right: 8px;
+}
+.more-opt-container-right .more-container-right {
+    position: absolute;
+    width: 8px;
+    height: 41px;
+    background: url(../../img/icon/rectangle-arrow.png);
+    right: 0px;
+}
+
+/* 样式二 */
+.more-container-left {
+    width: 73px;
+    height: 16px;
+    background: url(../../img/icon/rectangle-top1.png);
+}
+.more-container-right {
+    width: 73px;
+    height: 3px;
+    background: url(../../img/icon/rectangle-bottom.png);
+}
+.more-container-center {
+    width: 73px;
+    height: auto;
+    background: url(../../img/icon/rectangle-center1.png);
+}
+.more-opt-container{
+    position: absolute;
+    top: 22px;
+    right: -25px;
+    z-index: 9;
+}
+
+.more-opt-container-right {
+    position: absolute;
+    width: 260px;
+    height: 41px;
+    top: -10px;
+    right: 20px;
+    z-index: 9;
+}
+
+.opt-name {
+    margin: 0 10px 7px 10px;
+    display: inline-block;
+    width: 50px;
+    border: 1px solid #e5e5e5;
+    border-radius: 2px;
+    font-size: 12px;
+    line-height: 22px;
+    text-align: center;
+    color: #4c4c4c;
+}
+
+.more-opt-container-right .opt-name {
+    margin: 9px 5px 9px 0;
+    display: inline-block;
+    width: 50px;
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+    line-height: 20px;
+    text-align: center;
+}
+
+.color-333 {
+    color: #4c4c4c;
+}
+.color-666 {
+    color: #666;
+}
+/*对应的主题色*/
+.theme-color {
+    color: #3094f9;
+}
+/*列表分页 按钮*/
+.btn-primary:active:hover,
+.btn-primary.active:hover,
+.open > .dropdown-toggle.btn-primary:hover,
+.btn-primary:active:focus,
+.btn-primary.active:focus,
+.open > .dropdown-toggle.btn-primary:focus,
+.btn-primary:active.focus,
+.btn-primary.active.focus,
+.open > .dropdown-toggle.btn-primary.focus {
+  color: #fff;
+  background-color: #3094f9;
+  border-color: #3094f9;
+}
+.btn-primary:focus,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:link  {
+  background-color: #3094f9;
+  border-color: #3094f9;
+}
+/*分页按钮颜色*/
+.btn-primary {
+    color: #fff;
+    background-color: #3094f9;
+    border-color: #3094f9;
+}
+
+
+
+.opt-name:hover {
+    border: 1px solid #3094f9;
+    background-color: #3094f9;
+    color: #fff;
+}
+
+/* 更多操作 */

@@ -1,0 +1,220 @@
+html ,
+body {
+  position: relative;
+  height: 100%;
+}
+body {
+  background: #f0f2f5;
+}
+.app-body > .ant-spin-spinning {
+  position: fixed;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .25);
+  .ant-spin-dot {
+    top: 50%;
+  }
+}
+.app-body ,
+.app-body > .layout {
+  height: 100%;
+}
+.layout-right {
+  position: relative;
+  display: flex;
+  overflow: auto;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.layout-header {
+  position: relative;
+  z-index: 10;
+  height: 64px;
+  padding: 0 20px;
+  line-height: 64px;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0,21,41,.08);
+  .header-right {
+    position: absolute;
+    top: 0;
+    right: 20px;
+  }
+  .header-item {
+    display: inline-block;
+    height: 100%;
+    padding: 0 12px;
+    cursor: pointer;
+  }
+  .header-notice span {
+    vertical-align: initial;
+  }
+  .header-notice .header-notice-icon {
+    padding: 4px;
+    font-size: 16px;
+  }
+  .avatar {
+    margin: 20px 4px 20px 0;
+    vertical-align: middle;
+    color: #1890ff;
+    background: hsla(0,0%,100%,.85);
+  }
+  &.fixed-header {
+    position: fixed;
+    right: 0;
+    z-index: 1000;
+  }
+  &.fixed-header + .layout-content {
+    flex: 1;
+    // min-height: 0;
+    .page-view {
+      height: 100%;
+    }
+  }
+}
+
+.page-view {
+  background: #fff;
+  > .page-container {
+    padding: 16px 20px 0;
+    border-top: 20px solid #f0f2f5;
+  }
+}
+
+// 页面路径
+.page-breadcrumb {
+  padding-left: 20px;
+  .ant-breadcrumb {
+    height: 56px;
+    line-height: 56px;
+  }
+  // .breadcrumb-item-0 {
+  //   &::after {
+  //     content: ":";
+  //     margin: 0 6px;
+  //   }
+  //   .ant-breadcrumb-separator {
+  //     display: none;
+  //   }
+  // }
+}
+
+.card {
+  padding: 20px;
+  background: #fff;
+}
+
+// 底部
+.layout-footer {
+  margin-top: 20px;
+  text-align: center;
+  line-height: 60px;
+  background: #fff;
+  .copyright .anticon-copyright {
+    margin-right: 3px;
+  }
+}
+
+// 页面搜索区域
+.page-search {
+  .search-buttons {
+    button + button {
+      margin-left: 10px;
+    }
+  }
+}
+
+.form-inline {
+  display: block;
+  zoom: 1;
+  margin-right: -20px;
+  &:after {
+    display: block;
+    visibility: hidden;
+    clear: both;
+    height: 0;
+    content: " ";
+    font-size: 0;
+  }
+  .ant-form-item {
+    position: relative;
+    display: inline-block;
+    width: 33.3%;
+    padding-right: 20px;
+    padding-left: 70px;
+    .ant-form-item-label {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    &.search-buttons {
+      float: right;
+      text-align: right;
+    }
+    &.label5 {
+      padding-left: 84px;
+    }
+  }
+  .ant-calendar-picker {
+    width: 100%;
+  }
+}
+
+
+// 删除弹框
+.ant-popover-message {
+  min-width: 120px;
+}
+.ant-popover-buttons {
+  .ant-btn-sm {
+    font-size: 12px;
+  }
+}
+
+.table-operator {
+  position: relative;
+  z-index: 100;
+  margin-bottom: 16px;
+  text-align: right;
+}
+.ant-table-thead > tr > th {
+  border-top: 1px solid #e8e8e8;
+}
+
+// 地图组件
+.component-map {
+  position: relative;
+  padding-bottom: 18px;
+  .select-map {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+  }
+  // margin-bottom: 10px;
+  // box-shadow: 0 2px 8px rgba(0,0,0,.09);
+  canvas {
+    border: 1px solid rgba(0,0,0,.09);
+  }
+  .right-menu {
+    position: fixed;
+    z-index: 999;
+    border-radius: 1px;
+    background: #fff;
+    box-shadow: 0 .5em 1em 0 rgba(0, 0, 0, .1);
+    a {
+      display: block;
+      padding: 2px 6px;
+      color: #1a1a1a;
+      &:hover {
+        color: #fff;
+        background: #42b983;
+      }
+      &:first-child {
+        padding-top: 6px;
+      }
+      &:last-child {
+        padding-bottom: 6px;
+      }
+    }
+  }
+}

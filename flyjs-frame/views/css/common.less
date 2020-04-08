@@ -1,0 +1,256 @@
+body {
+    font-family: "Microsoft YaHei", "Helvetica Neue", "Luxi Sans", "DejaVu Sans", Tahoma, "Hiragino Sans GB", STHeiti;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/**
+ * 无数据
+*/
+
+.common-grid-empty {
+    position: relative;
+    height: 250px;
+}
+
+.nodata-wrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -85px;
+    margin-left: -98px;
+    width: 196px;
+    height: 144px;
+    background: url(../img/bg-nodata.png) 50% 50% no-repeat;
+
+    p {
+        position: absolute;
+        bottom: -40px;
+        width: 100%;
+        font-size: 14px;
+        text-align: center;
+    }
+}
+
+
+/* 页面组 */
+.page-view-breadcrumb {
+    padding: 0 20px;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    font-size: 12px;
+    color: #333;
+}
+
+.page-view-header {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+
+    .btn-search {
+        margin-top: 10px;
+    }
+}
+
+.page-view-grid {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    margin-top: 10px;
+    background-color: #fff;
+
+    .pagination {
+        padding: 8px;
+
+        .info {
+            margin-left: 0;
+        }
+    }
+
+    .grid-extend-title {
+        padding-left: 20px;
+        height: 55px;
+        line-height: 55px;
+        width: 100%;
+        border-bottom: 2px solid #e1e3e8;
+
+        .grid-extend-describe {
+            float: left;
+            font-size: 16px;
+            font-weight: 600;
+
+            i {
+                display: inline-block;
+                margin-right: 10px;
+                width: 3px;
+                height: 14px;
+                background-color: #666;
+                vertical-align: -1px;
+            }
+        }
+
+        .grid-extend-btn {
+            float: right;
+            padding-right: 20px;
+        }
+    }
+
+    /*通用表格*/
+    .common-grid {
+        width: 100%;
+        box-sizing: border-box;
+
+        table {
+            table-layout: fixed;
+            width: 100%;
+
+            th {
+                border-bottom: 1px solid #e5e5e5;
+                height: 50px;
+                color: #666;
+                font-weight: 500;
+                text-align: center;
+                padding: 0 3px;
+                font-size: 12px;
+
+                &[data-key] {
+                    cursor: pointer;
+                }
+
+                .sort-icon {
+                    display: none;
+                    width: 12px;
+                    height: 12px;
+                    background: url(../img/icon-sort-desc.png) no-repeat center center;
+                    vertical-align: -1px;
+
+                    &.asc {
+                        background: url(../img/icon-sort-asc.png) no-repeat center center;
+                    }
+                }
+
+                &:hover,
+                &.active-column {
+                    & .sort-icon {
+                        display: inline-block;
+                    }
+                }
+            }
+
+            td {
+                border-bottom: 1px solid #e5e5e5;
+                padding: 0 3px;
+                height: 44px;
+                color: #333;
+                font-size: 12px;
+                text-align: center;
+                /*font-weight: 600;*/
+            }
+
+            tr:hover td {
+                background-color: #f8f8f8;
+            }
+        }
+
+        .common-grid-body {
+            min-height: 50px;
+            overflow: auto;
+        }
+    }
+
+    /* 操作按钮组 */
+    .grid-btn {
+        display: inline-block;
+        padding: 5px 12px;
+        border: 1px solid #cdcdcd;
+        border-radius: 4px;
+        color: #333;
+        font-weight: 500;
+        box-sizing: border-box;
+        font-size: 12px;
+        line-height: 12px;
+        background-color: #fff;
+    }
+
+    .grid-btn:visited,
+    .grid-btn:focus {
+        color: #333;
+    }
+
+    .grid-btn:hover {
+        background-color: #34c1e4;
+        color: #fff;
+    }
+
+    .grid-btn.disabled {
+        background-color: #f8f8f8;
+        color: #cdcdcd;
+    }
+}
+
+.widget .input input {
+    height: 28px;
+    line-height: 28px;
+}
+
+
+/* 通用按钮样式 */
+
+.extend-btn,
+.extend-btn:focus,
+.extend-btn:active,
+.extend-btn:hover {
+    display: inline-block;
+    padding: 0 15px;
+    height: 30px;
+    line-height: 30px;
+    background-color: #34c1e4;
+    color: #fff;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+.extend-btn.btn-search i {
+    margin-right: 10px;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background: url(../img/icon-search.png) no-repeat center center;
+    vertical-align: -2px;
+}
+
+
+/* 溢出隐藏 */
+
+.ell {
+
+    // 处理用户手动换行显示时溢出的问题
+    br {
+        display: none;
+    }
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.multi-line-scroll {
+    max-height: 200px;
+    width: 100%;
+}
+
+/* 存在多行文本且第一行数据较少未溢出时，单行溢出隐藏会导致仅显示第一行较少的文字 */
+// .multi-line-ell {
+//     overflow: hidden;
+//     text-overflow: ellipsis;
+//     white-space: nowrap;
+//     display: -webkit-box;
+//     -webkit-line-clamp: 1;
+//     -webkit-box-orient: vertical;
+// }

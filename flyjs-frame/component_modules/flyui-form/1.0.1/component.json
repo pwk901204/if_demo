@@ -1,0 +1,16 @@
+ {
+   "name": "form",
+   "version": "1.0.1",
+   "description": "flyui form",
+   "main": "form.js",
+   "files": [
+     "form.tpl",
+     "form.css",
+     "form.js"
+   ],
+   "dependencies": {
+     "flyui/validate": "1.0.0",
+     "lib/fly": "1.2.6",
+     "lib/jquery": "1.8.2"
+   }
+ }

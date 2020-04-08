@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:fly>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0"
+  />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>备份管理系统</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">  
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">  
+    <link href="themes/default.css" rel="stylesheet">
+    <link href="css/login.less" rel="stylesheet">
+    <script type="text/javascript">var CONTEXTPATH = '/fly-daas';</script>
+</head>
+
+<body>
+    <div class="login-wrap">
+        <div class="login-panel">
+            <div class="platform-logo"></div>
+            <form  onsubmit="return false;">
+                <div class="login-user">
+                    <input  type="text" name="userAccount"  placeholder="用户名" data-bind="value: form.userAccount" />
+                </div>
+                <div class="login-password">
+                    <input type="password" name="password" placeholder="密码" data-bind="value: form.password" />
+                </div>
+                <span style="display: none;" data-bind="visible: valideVisible">
+                    <span class="login-validate">
+                        <input type="text" name="validatecode" placeholder="验证码" data-bind="value: validatecode" />
+                    </span>
+                    <img src="img/login-validate.png" >
+                    <a class="action-next-group" href="javascript:;" data-bind="click: actionNextGroup">换一组</a>
+                </span>
+                <button data-bind="click: loginHandle">登录</button>
+            </form>
+        </div>
+        <div class="footer">
+            版权所有：技术中心&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Copyright科大讯飞股份有限公司2017&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.0.1001版本
+        </div>
+    </div>
+    <script src="lib/lib.js"></script>
+    <script src="app/login.js?__inline"></script>
+</body>
+
+</html>

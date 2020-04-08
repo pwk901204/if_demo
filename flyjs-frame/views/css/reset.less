@@ -1,0 +1,150 @@
+/*重置系统中组件的样式*/
+
+
+/*重置checkbox*/
+
+.v-checkbox-wrapper .v-checkbox-checked .v-checkbox-inner,
+.v-checkbox-wrapper .v-checkbox-indeterminate .v-checkbox-inner,
+.vast-switch.vast-switch-checked {
+    background-color: #34c1e4;
+    border-color: #57d4f3;
+}
+
+.v-checkbox-wrapper .v-checkbox-input:focus + .v-checkbox-inner,
+.v-checkbox-wrapper .v-checkbox-wrapper:hover .v-checkbox-inner,
+.v-checkbox-wrapper .v-checkbox:hover .v-checkbox-inner {
+    border-color: #34c1e4;
+}
+
+
+/*重置按钮*/
+
+.btn-primary {
+    color: #fff;
+    background-color: #34c1e4;
+    border-color: #57d4f3;
+}
+
+.btn-primary:focus,
+.btn-primary.focus {
+    color: #fff;
+    background-color: #27c4ea;
+    border-color: #34c1e4;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #27c4ea;
+    border-color: #34c1e4;
+}
+
+.btn-primary:active,
+.btn-primary.active,
+.open > .dropdown-toggle.btn-primary {
+    color: #fff;
+    background-color: #27c4ea;
+    border-color: #34c1e4;
+}
+
+
+/* 分页 */
+
+.page-view-grid {
+    .pagination {
+        padding: 8px 0 8px 8px;
+        margin: 0;
+        & * {
+            font-size: 12px;
+        }
+        & .jump,
+        & .simple {
+            .form-control {
+                height: 27px;
+            }
+        }
+        & .simple * {
+            vertical-align: middle;
+        }
+        & .switch {
+            line-height: 30px;
+            .vast-select {
+                width: 60px;
+                .vast-select-input {
+                    .form-control {
+                        padding-right: 25px;
+                        height: 25px;
+                        line-height: 25px;
+                    }
+                    .vast-select-input-icon {
+                        width: 25px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/*修复日期在弹出窗中  弹出到弹出窗上*/
+
+.vast-pop-placement-bottom-left {
+    z-index: 1050;
+}
+
+
+/*重置 label的样式*/
+
+label {
+    font-weight: normal;
+}
+
+
+/*重置 radio的样式*/
+
+.v-radio.v-radio-checked .v-radio-inner {
+    border-color: #34c1e4;
+    &:after {
+        background-color: #34c1e4;
+    }
+}
+
+label.v-radio-wrappe .v-radio-focused .v-radio-inner,
+label.v-radio-wrapper:hover .v-radio .v-radio-inner,
+label.v-radio-wrapper .v-radio:hover .v-radio-inner {
+    border-color: #34c1e4;
+}
+
+
+/* 表单 项的label */
+
+.vast-form-item {
+    label {
+        color: #333;
+    }
+}
+
+
+/* 进度条 */
+
+.vast-progress-inner .vast-progress-bg {
+    background-color: #34c1e4;
+}
+
+
+/*选择框组价*/
+
+.vast-select-tags {
+    .vast-select-tag {
+        background-color: #34c1e4;
+        .tag-close:hover {
+            color: #34c1e4;
+        }
+    }
+}
+
+
+/*重置所有表单*/
+
+body .form-control {
+    font-size: 12px;
+}

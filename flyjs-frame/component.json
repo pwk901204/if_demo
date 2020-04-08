@@ -1,0 +1,20 @@
+{
+  "name": "flypro",
+  "version": "1.0.0",
+  "dependencies": {
+    "lib/jquery": "1.8.2",
+    "lib/fly": "1.2.6",
+    "flyui/router": "1.0.6",
+    "flyui/alert": "1.0.3",
+    "flyui/list": "1.0.0",
+    "flyui/dialog": "1.0.0",
+    "flyui/dropdown": "1.0.2",
+    "flyui/form": "1.0.1",
+    "flyui/calender": "1.0.2",
+    "flyui/combobox": "1.0.1",
+    "flyui/datepicker": "1.0.4",
+    "flyui/textbox": "1.0.3",
+    "flyui/grid": "1.0.0",
+    "flyui/pager": "1.0.2"
+  }
+}

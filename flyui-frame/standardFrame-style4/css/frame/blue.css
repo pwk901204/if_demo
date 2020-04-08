@@ -1,0 +1,322 @@
+/** 头部渐变背景 */
+
+.container-header {
+  background: #1a3b63 url(../../img/frame/blue/user-left.png) no-repeat right center;
+}
+
+/** logo文本颜色 */
+
+.logo-text {
+  color: #1a3b63;
+}
+
+/** 左侧导航选中样式 */
+
+.menu-left-info .menu-selected,
+.menu-left-info .menu-selected:hover,
+.subItem-num {
+  background: #214d82;
+}
+
+/*输入框 样式定义*/
+
+.textbox .input:hover,
+.textbox .input:focus {
+  border: 1px solid #214d82;
+}
+
+.state-hover,
+.state-hover:hover {
+  border-color: #214d82;
+}
+
+div.state-selected:hover,
+li.state-selected:hover {
+  background-color: #214d82;
+  border-color: #214d82;
+}
+
+/** 日期选中样式 */
+
+.calender td.active,
+.calender td.active:hover,
+.calender td.active:active {
+  background: #fff url(../../img/frame/blue/date-select.png) no-repeat center center;
+}
+
+.calender .next .icon,
+.calender .prev .icon {
+  background-position: 0 0;
+}
+
+.calender .next .icon {
+  background: url(../../img/frame/blue/date-right.png) no-repeat center center;
+}
+
+.calender .prev .icon {
+  background: url(../../img/frame/blue/date-left.png) no-repeat center center;
+}
+
+.calender .next:hover,
+.calender .prev:hover {
+  background-color: #fff;
+}
+
+.calender .next:hover .icon {
+  background: url(../../img/frame/blue/date-rightHover.png) no-repeat center center;
+}
+
+.calender .prev:hover .icon {
+  background: url(../../img/frame/blue/date-leftHover.png) no-repeat center center;
+}
+
+/*列表分页 按钮*/
+
+.btn-primary:active:hover,
+.btn-primary.active:hover,
+.open>.dropdown-toggle.btn-primary:hover,
+.btn-primary:active:focus,
+.btn-primary.active:focus,
+.open>.dropdown-toggle.btn-primary:focus,
+.btn-primary:active.focus,
+.btn-primary.active.focus,
+.open>.dropdown-toggle.btn-primary.focus,
+.btn-primary:focus,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:link,
+.btn-primary {
+  background-color: #214d82;
+  border-color: #214d82;
+}
+
+.row.row-paging {
+  font-size: 12px;
+  color: #4d4d4d;
+}
+
+.row {
+  padding: 19px 34px 20px 34px;
+}
+
+.row-paging .paging-left input {
+  width: 48px;
+}
+
+.row-paging .paging-left .widget {
+  margin: 0 3px;
+  width: 50px;
+  vertical-align: middle;
+}
+
+.row-paging .paging-left .widget span.input {
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.row-paging .paging-left .icon-triangle-down {
+  top: -2px;
+}
+
+.row .dropdown-wrap {
+  padding-right: 22px;
+}
+
+.row-paging .paging-left .widget:focus {
+  outline: none;
+}
+
+.row-paging .paging-left .dropdown-wrap {
+  height: 28px;
+  border-color: #cddbe4;
+}
+
+.row .dropdown-wrap .icon-triangle-down {
+  background: url(../../img/frame/blue/dropdown-icon.png) no-repeat center center;
+}
+
+/* 下拉框 配色 */
+
+.state-selected,
+.state-selected:link,
+.state-selected:visited {
+  background-color: #214d82;
+  border-color: #214d82;
+}
+
+/**
+ * 按钮模块 
+ */
+
+.btn-normal {
+  background-color: #214d82;
+}
+
+.btn-normal:hover,
+.btn-normal:focus,
+.btn-normal:active,
+.btn-normal-hover {
+  background-color: #1e4779;
+}
+
+.btn-option {
+  border: 1px solid #2187d3;
+  color: #2187d3;
+}
+
+.btn-option.option-add:hover,
+.btn-option.option-add:focus,
+.btn-option.option-add:active,
+.option-add-hover {
+  background-color: #eef8ff;
+  color: #2187d3;
+}
+
+.btn-option.option-edit:hover,
+.btn-option.option-edit:focus,
+.btn-option.option-edit:active {
+  background: #f0fffb;
+  color: #00b47f;
+}
+
+.btn-option.option-delete:hover,
+.btn-option.option-delete:focus,
+.btn-option.option-delete:active {
+  background: #fff5f5;
+  color: #f92f2f;
+}
+
+.btn-lg:after,
+.opt-name:after,
+.btn:after,
+.select-default .icon-node:after,
+.radio-wrap .radio-default .icon-node:after {
+  background-color: #214d82;
+}
+
+.btn-cancel:after {
+  background-color: #cdcdcd;
+}
+
+/** 新增按钮 */
+
+.option-add .option-icon {
+  background: url(../../img/frame/blue/option-add.png) no-repeat center center;
+}
+
+/** 编辑按钮 */
+
+.option-edit {
+  color: #00b47f;
+  border: 1px solid #00b47f;
+}
+
+.option-edit:hover,
+.option-edit:active {
+  background: #f0fffb;
+  color: #00b47f;
+}
+
+.option-edit .option-icon {
+  background: url(../../img/frame/blue/option-edit.png) no-repeat center center;
+}
+
+/** 删除按钮 */
+
+.option-delete {
+  color: #f92f2f;
+  border: 1px solid #f92f2f;
+}
+
+.option-delete:hover,
+.option-delete:active {
+  background: #fff5f5;
+  color: #f92f2f;
+}
+
+.option-delete .option-icon {
+  background: url(../../img/frame/blue/option-delete.png) no-repeat center center;
+}
+
+/** tab选中状态 */
+
+.list-tab .tab-spaned {
+  border-bottom: 2px solid #214d82;
+}
+
+/** 列表中的操作按钮 */
+
+.btn-default:hover,
+.btn-default:focus,
+.btn-default.focus,
+.btn-default:active,
+.btn-default.active,
+.opt-name:hover,
+.opt-name:focus,
+.opt-name.focus,
+.opt-name:active,
+.opt-name.active,
+.opt-name.active:hover {
+  border: 1px solid #214d82;
+  background-color: #214d82;
+}
+
+.btn-default:active:hover,
+.btn-default.active:hover,
+.open>.dropdown-toggle.btn-default:hover,
+.btn-default:active:focus,
+.btn-default.active:focus,
+.open>.dropdown-toggle.btn-default:focus,
+.btn-default:active.focus,
+.btn-default.active.focus,
+.open>.dropdown-toggle.btn-default.focus {
+  color: #fff;
+  border: 1px solid #214d82;
+  background-color: #214d82;
+}
+
+.more-opt:hover {
+  border: none;
+  background: url(../../img/frame/blue/more-icon-hover.png) no-repeat center center;
+}
+
+.list-table tbody tr td:hover,
+.list-table tbody tr:hover td,
+.list-table tbody tr.hover td {
+  background-color: #f5f5f5;
+}
+
+.select-check {
+  background: url(../../img/frame/blue/checkbox-selected.png) no-repeat left center;
+}
+
+.radio-wrap .radio-selected,
+.radio-wrap .radio-selected:hover {
+  background: url(../../img/frame/blue/radio-selected.png) no-repeat left center;
+}
+
+/**
+ * 弹框样式 
+ */
+
+.dialog .dialog-header {
+  background-color: #214d82;
+}
+
+.dialog-footer button.dialog-autofocus:focus,
+.dialog-footer button.dialog-autofocus:active,
+.dialog-footer button.dialog-autofocus {
+  outline: none;
+  background-color: #214d82;
+  border-color: #214d82;
+}
+
+.dialog-footer button.dialog-autofocus:hover {
+  background-color: #1e4779;
+  border-color: #1e4779;
+}
+
+.fly-mask-content>div>span {
+  background: url(../../img/frame/blue/loading.gif) no-repeat left center;
+  padding-left: 33px;
+}

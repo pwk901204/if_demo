@@ -1,0 +1,49 @@
+{
+	"flag": true,
+	"key": "success.operation",
+	"msg": "操作成功",
+	"data": {
+		"result": [{
+			"createTime": "2017-11-06 15:47",
+			"creator": "张三",
+			"departmentName": "架构与平台部",
+			"description": "架构与平台部简介啊啊啊",
+			"id": 1,
+			"updateTime": null,
+			"updator": null
+		}, {
+			"createTime": "2017-11-06 15:47",
+			"creator": "李四",
+			"departmentName": "技术中心",
+			"description": "芜湖技术中心",
+			"id": 2,
+			"updateTime": null,
+			"updator": null
+		}, {
+			"createTime": "2017-11-06 15:47",
+			"creator": "王五",
+			"departmentName": "技术中心",
+			"description": "芜湖技术中心",
+			"id": 3,
+			"updateTime": null,
+			"updator": null
+		}, {
+			"createTime": "2017-11-06 15:47",
+			"creator": "赵柳",
+			"departmentName": "技术中心",
+			"description": "芜湖技术中心",
+			"id": 4,
+			"updateTime": null,
+			"updator": null
+		}, {
+			"createTime": "2017-11-06 15:47",
+			"creator": "无痕",
+			"departmentName": "技术中心",
+			"description": "芜湖技术中心",
+			"id": 5,
+			"updateTime": null,
+			"updator": null
+		}],
+		"total": 15
+	}
+}

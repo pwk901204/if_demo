@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>备份管理系统</title>
+    <link href="themes/default.min.css" rel="stylesheet">
+    <link href="css/reset.less" rel="stylesheet">
+    <link href="css/site.css" rel="stylesheet">
+    <link href="css/header.less" rel="stylesheet">
+    <link href="css/sidebar.less" rel="stylesheet">
+    <link href="css/detail.less" rel="stylesheet">
+    <link href="css/common.less" rel="stylesheet">
+    <link href="css/index.less" rel="stylesheet">
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="img/logo-full.png"></div>
+            <div class="system">
+                <div class="user-info">
+                    <img src="img/default-head-photo2.png">
+                    <span data-bind = "text: userName">Hi,芜湖</span>
+                </div>
+                <div class="system-logout" data-bind="click: logoutHandle">
+                    <i class="icon-sys-logout"></i>
+                    <span>退出</span>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper">
+            <div class="sidebar">
+                <div class="menu-wrapper" data-bind="source: sidebarDs">
+                    <span class="menu-item" data-bind="attr: {title: cloumn}, css: {active: active}, click: clickHandle">
+                    <span class="menu-item-icon menu-icon-home" data-bind="attr: {class: classGroup}"></span>
+                    <span class="menu-item-text" data-bind="text: cloumn"></span>
+                    </span>
+                </div>
+            </div>
+            <div class="content-wrapper">
+                <div id="mainview" class="content"></div>
+            </div>
+            <div class="footer"></div>
+        </div>
+        <script src="lib/lib.js"></script>
+        <script src="app/index.js?__inline"></script>
+</body>
+
+</html>

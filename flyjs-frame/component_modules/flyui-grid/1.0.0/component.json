@@ -1,0 +1,16 @@
+ {
+   "name": "grid",
+   "version": "1.0.0",
+   "description": "表格组件",
+   "main": "grid.js",
+   "files": [
+     "grid.js",
+     "grid.html",
+     "column.js",
+     "grid.css"
+   ],
+   "dependencies": {
+     "lib/fly": "1.2.6",
+     "lib/jquery": "1.8.2"
+   }
+ }

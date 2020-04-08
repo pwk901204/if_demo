@@ -1,0 +1,64 @@
+.page-view-error {
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    .error-info-wrapper {
+        max-width: 800px;
+        height: 375px;
+        margin: 5% auto 0 auto;
+        .error-info-logo {
+            height: 126px;
+            background: url(error-info-logo.png) no-repeat center center;
+        }
+        .error-info-desc {
+            font-size: 26px;
+            font-weight: 600;
+            text-align: center;
+            line-height: 90px;
+            border-bottom: 1px solid #e1e3e8;
+        }
+        .error-info-reason {
+            text-align: center;
+            padding: 15px;
+            label {
+                vertical-align: top;
+                font-weight: normal;
+            }
+            ol {
+                display: inline-block;
+                list-style: disc inside;
+                vertical-align: top;
+                li {
+                    text-align: left;
+                }
+            }
+        }
+        .error-info-action {
+            margin-top: 20px;
+            text-align: center;
+            .action-btn {
+                display: inline-block;
+                color: #34c1e4;
+                cursor: pointer;
+                i {
+                    display: inline-block;
+                    width: 20px;
+                    height: 20px;
+                    background: url(icon-action-refresh.png) no-repeat center center;
+                    vertical-align: -4px;
+                    margin-right: 10px;
+                }
+            }
+            .action-btn + .action-btn {
+                margin-left: 60px;
+                i {
+                    display: inline-block;
+                    width: 26px;
+                    height: 20px;
+                    background: url(icon-action-goto.png) no-repeat center center;
+                }
+            }
+        }
+    }
+}
