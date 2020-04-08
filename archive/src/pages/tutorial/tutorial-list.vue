@@ -24,7 +24,6 @@
     </div>
 
     <m-table
-      showRowSelection
       :pagination="PAGINATION"
       :columns="columns"
       :dataSource="dataSource"
@@ -50,25 +49,26 @@ export default {
   data () {
     const columns = [
       { title: '#', dataIndex: '_index' },
-      { title: '规则编号', dataIndex: 'no' },
+      { title: '规则编号', dataIndex: 'no', width: 120 },
       { title: '描述', dataIndex: 'description' },
       {
         title: '服务调用次数',
         dataIndex: 'callNo',
         sorter: true,
-        needTotal: true,
+        width: 120,
         customRender: (text) => text + ' 次'
       },
       {
         title: '状态',
         dataIndex: 'status',
+        width: 120,
         customRender: (text) => <a-badge status={statusMap[text].status} text={statusMap[text].text} />
       },
-      { title: '更新时间', dataIndex: 'updatedAt', sorter: true },
+      { title: '更新时间', dataIndex: 'updatedAt', width: 120, sorter: true },
       {
         title: '操作',
         dataIndex: 'action',
-        width: '150px',
+        width: 150,
         scopedSlots: { customRender: 'action' }
       }
     ]
@@ -101,10 +101,12 @@ export default {
     },
     // pagination, filters or sorter changed
     onTableChange (changeParams) {
+      console.log(changeParams)
       this.axiosGet(this._getTableParams(changeParams))
     },
     // row selection
     onRowSelection (selectedRows) {
+      console.log(selectedRows)
       this.selectedRows = selectedRows
     }
   }

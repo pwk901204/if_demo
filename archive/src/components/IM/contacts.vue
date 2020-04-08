@@ -5,69 +5,8 @@
       <img src="./assets/search.png" />
       <input type="text" placeholder="搜索"/>
     </div>
-    <!-- <div class="IM-contacts-list">
-      <div class="item flex-row-between active">
-        <p class="text">李琦</p>
-        <a-badge count="25" />
-      </div>
-      <div class="item flex-row-between">
-        <p class="text">李琦</p>
-        <a-badge status="error" />
-      </div>
-    </div>
-    <div class="IM-contacts-list tree">
-      <div class="item flex-row-between active">
-        <p class="text">李琦</p>
-        <a-badge count="25" />
-      </div>
-      <div class="item flex-row-between">
-        <p class="text">李琦</p>
-        <a-badge status="error" />
-      </div>
-    </div> -->
-    <!-- <div class="IM-contacts-list">
-      <div class="item flex-row-between active">
-        <p class="text">李琦</p>
-        <a-badge count="25" />
-      </div>
-      <div ></div>
-      <div class="item flex-row-between">
-        <p class="text">李琦</p>
-        <a-badge status="error" />
-      </div>
-    </div> -->
     <div class="IM-contacts-list">
       <a-menu mode="inline">
-        <a-menu-item key="1">
-          <span>李琦</span>
-        </a-menu-item>
-        <a-menu-item key="2">
-          <span>王三</span>
-        </a-menu-item>
-        <a-menu-item key="1">
-          <span>李琦</span>
-        </a-menu-item>
-        <a-menu-item key="2">
-          <span>王三</span>
-        </a-menu-item>
-        <a-menu-item key="1">
-          <span>李琦</span>
-        </a-menu-item>
-        <a-menu-item key="2">
-          <span>王三</span>
-        </a-menu-item>
-        <a-menu-item key="1">
-          <span>李琦</span>
-        </a-menu-item>
-        <a-menu-item key="2">
-          <span>王三</span>
-        </a-menu-item>
-        <a-menu-item key="1">
-          <span>李琦</span>
-        </a-menu-item>
-        <a-menu-item key="2">
-          <span>王三</span>
-        </a-menu-item>
         <a-menu-item key="1">
           <span>李琦</span>
         </a-menu-item>
@@ -128,20 +67,7 @@ export default {
     // &:hover::-webkit-scrollbar {
     //   display: block;
     // }
-    .item{
-      padding: 0 10px;
-      height:40px;
-      .text{
-        color:#666;
-        margin: 0;
-      }
-      &.active .text{
-        color: #333;
-      }
-      &.active{
-        background: #d9d9d9;
-      }
-    }
+
     .ant-menu{
       background: transparent;
     }

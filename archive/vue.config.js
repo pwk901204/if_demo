@@ -91,6 +91,20 @@ module.exports = {
         name: 'assets/[name].[hash:8].[ext]'
       })
 
+    config.module
+      .rule('md')
+      .test(/\.md$/)
+      .use('file-loader')
+      .loader('file-loader')
+      .end()
+
+    config.module
+      .rule('doc')
+      .test(/\.(pdf|doc|docx|xls|xlsx|ppt|pptx)$/)
+      .use('file-loader')
+      .loader('file-loader')
+      .end()
+
     config.plugin('html').tap(args => {
       args[0].cdn = assetsCDN
       return args
@@ -114,13 +128,13 @@ module.exports = {
 
   devServer: {
     // If you want to turn on the proxy, please remove the mockjs /src/main.jsL11
-    // proxy: {
-    //   '/api': {
-    //     target: 'https://mock.ihx.me/mock/5baf3052f7da7e07e04a5116/antd-pro',
-    //     ws: false,
-    //     changeOrigin: true
-    //   }
-    // }
+    proxy: {
+      '/api': {
+        target: 'http://10.40.220.131:8187/zhda-lan-daims/',
+        ws: false,
+        changeOrigin: true
+      }
+    }
   },
 
   productionSourceMap: false

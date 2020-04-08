@@ -1,7 +1,6 @@
 import Vue from 'vue'
 // import VueStorage from 'vue-ls'
 // import config from '@/config/defaultSettings'
-
 // base library
 import '@/core/antd'
 import request from '@/utils/request'
@@ -9,6 +8,7 @@ import request from '@/utils/request'
 // ext library
 // import VueClipboard from 'vue-clipboard2'
 // import MultiTab from '@/components/MultiTab'
+// import VueDraggableResizable from 'vue-draggable-resizable'
 import QueryButton from '@/components/QueryButton'
 import MTable from '@/components/Table'
 // import PermissionHelper from '@/utils/helper/permission'
@@ -19,6 +19,7 @@ Vue.prototype.$axios = request
 // Vue.use(Viser)
 // Vue.use(MultiTab)
 Vue.use(QueryButton)
+// Vue.component('vue-draggable-resizable', VueDraggableResizable)
 Vue.use(MTable)
 // Vue.use(VueStorage, config.storageOptions)
 // Vue.use(VueClipboard)

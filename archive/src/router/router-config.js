@@ -80,7 +80,7 @@ const constantRouter = [
       },
       {
         path: '/tutorial/contentTree',
-        name: 'Tree',
+        name: 'ContentTree',
         component: () => import(/* webpackChunkName: "tutorial" */ '@/pages/tutorial/contentTree'),
         meta: { title: '目录树' }
       },
@@ -95,6 +95,12 @@ const constantRouter = [
         name: 'Preview',
         component: () => import(/* webpackChunkName: "tutorial" */ '@/pages/tutorial/preview'),
         meta: { title: '文件预览' }
+      },
+      {
+        path: '/tutorial/iconFont',
+        name: 'IconFont',
+        component: () => import(/* webpackChunkName: "tutorial" */ '@/pages/tutorial/icon-font'),
+        meta: { title: 'IconFont' }
       }
     ]
   },

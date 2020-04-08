@@ -22,19 +22,6 @@ export default {
   },
   data () {
     return {
-      // config: {
-      //   height: 500,
-      //   menubar: false,
-      //   language: 'zh_CN',
-      //   plugins: 'preview hr lists table fullscreen image media fileupload wordcount ',
-      //   toolbar: 'undo redo | bold italic underline forecolor backcolor | styleselect | fontsizeselect | indent outdent alignleft aligncenter alignright bullist numlist table | image media fileupload fullscreen'
-      //   // plugins: [
-      //   //   'advlist autolink lists link image charmap print preview anchor',
-      //   //   'searchreplace visualblocks code fullscreen',
-      //   //   'insertdatetime media table paste code help wordcount'
-      //   // ],
-      //   // toolbar: 'undo redo | formatselect | bold italic backcolor | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat | help'
-      // },
       acceptMap: Object.freeze({
         file: '*',
         image: 'image/*',
@@ -47,7 +34,7 @@ export default {
       })
     }
   },
-  beforeMount () {
+  mounted () {
     loadScript('plugins/tinymce/tinymce.js', (err) => {
       if (err) {
         // 若脚本加载错误，这弹出错误提示
@@ -56,13 +43,11 @@ export default {
       }
       const editor = window.tinymce.get('tiny')
       if (!editor) {
-        //   debugger
         this.renderEditor()
       } else {
-        // debugger
+        editor.remove()
         editor.destroy()
         this.renderEditor()
-        console.log('ss')
       }
     })
   },
@@ -137,6 +122,11 @@ export default {
       formData.append('upfile', file, file.name)
       xhr.send(formData)
     }
+  },
+  beforeDestroy () {
+    const editor = window.tinymce.get('tiny')
+    editor.remove()
+    editor.destroy()
   }
 }
 </script>

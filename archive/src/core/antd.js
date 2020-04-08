@@ -92,6 +92,13 @@ Vue.use(Popconfirm)
 // Vue.use(VueCropper)
 Vue.use(notification)
 
+// iconfont
+const IconFont = Icon.createFromIconfontCN({
+  scriptUrl: '//at.alicdn.com/t/font_1740370_jayun482bd.js',
+})
+console.log(IconFont)
+Vue.component('icon-font', IconFont)
+
 Vue.prototype.$confirm = Modal.confirm
 Vue.prototype.$message = message
 Vue.prototype.$notification = notification
